@@ -1,0 +1,36 @@
+<div class="year-container">
+  <div class="header">
+    <h1>🕉️ Festival 2024</h1>
+    <p>Pictures, Videos & Teams</p>
+  </div>
+
+  <div class="container">
+    <section class="content-section">
+      <h2>📸 Photo Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let photo of photos">
+          <img [src]="photo.src" [alt]="photo.alt" />
+          <div class="overlay">
+            <h3>{{ photo.title }}</h3>
+            <p>{{ photo.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>🎥 Video Collection</h2>
+      <div class="video-grid">
+        <div class="video-item" *ngFor="let video of videos">
+          <div class="video-player">
+            <video [src]="video.src" controls preload="metadata">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h3>{{ video.title }}</h3>
+          <p>{{ video.description }}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

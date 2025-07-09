@@ -1,0 +1,233 @@
+.home-container {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, #FF6B35 0%, #D32F2F 50%, #7B1FA2 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.years-section {
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #D32F2F;
+  font-weight: 600;
+}
+
+.years-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.year-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.year-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #FF6B35;
+}
+
+.year-card.special {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA000 100%);
+  color: #2C2C2C;
+}
+
+.year-card.special:hover {
+  border-color: #D32F2F;
+}
+
+.year-card-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #D32F2F;
+  font-weight: 700;
+}
+
+.year-card.special .year-card-content h3 {
+  color: #2C2C2C;
+}
+
+.year-card-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.year-card.special .year-card-content p {
+  color: #2C2C2C;
+}
+
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature {
+  background: rgba(255, 107, 53, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #D32F2F;
+  font-weight: 500;
+}
+
+.year-card.special .feature {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2C2C2C;
+}
+
+.about-section {
+  background: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.about-actions {
+  margin-bottom: 3rem;
+}
+
+.about-btn {
+  background: linear-gradient(135deg, #FF6B35 0%, #D32F2F 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.about-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.committee-section {
+  margin-top: 3rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.committee-title {
+  font-size: 2rem;
+  color: #D32F2F;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.committee-member {
+  transition: transform 0.3s ease;
+}
+
+.committee-member:hover {
+  transform: translateY(-5px);
+}
+
+.member-card {
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #FF6B35;
+  text-align: left;
+}
+
+.member-card h4 {
+  color: #D32F2F;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .years-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+}
