@@ -27,7 +27,8 @@ export class HomeComponent {
     { name: 'Yaswanth' },
     { name: 'Prudhvi' },
     { name: 'Narendhra' },
-    { name: 'Chintu' }
+    { name: 'G Prabhakar' },
+    { name: 'P Bhargav' },
   ];
 
   toggleCommitteeMembers() {
