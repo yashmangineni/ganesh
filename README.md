@@ -28,6 +28,20 @@ To deploy:
 2. Select this repository
 3. Netlify will automatically use the settings from `netlify.toml`
 
+## Custom Domain Configuration
+
+The site is configured to work with the custom domain: `http://balaganeshyouthguntur.duckdns.org/`
+
+To configure this domain:
+1. Go to your Netlify dashboard
+2. Select your site
+3. Navigate to "Domain settings"
+4. Click "Add custom domain"
+5. Enter your domain: `balaganeshyouthguntur.duckdns.org`
+6. Follow Netlify's instructions for DNS configuration
+
+Since this uses DuckDNS (dynamic DNS), you'll need to ensure your DuckDNS client points to your Netlify site.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
