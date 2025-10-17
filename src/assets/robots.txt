@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://balaganeshyouthguntur.duckdns.org/assets/sitemap.xml
+Sitemap: http://balaganeshyouthguntur.duckdns.org/sitemap.xml

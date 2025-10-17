@@ -24,8 +24,14 @@
               "src/favicon.ico",
               "src/assets",
               "src/_redirects",
+              "src/sitemap.xml",
               {
                 "glob": "google*.html",
+                "input": "src/assets/",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
                 "input": "src/assets/",
                 "output": "/"
               }
