@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Join our yearly celebrations, photo galleries, and festival updates.' });
     this.meta.updateTag({ property: 'og:title', content: 'Bala Ganesh Youth Community | Vinayaka Chavitihi Festival Housing Board Guntur' });
     this.meta.updateTag({ property: 'og:description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Join our yearly celebrations, photo galleries, and festival updates.' });
-    this.meta.updateTag({ property: 'og:url', content: 'https://ganesh-rho.vercel.app/' });
+    this.meta.updateTag({ property: 'og:url', content: 'http://balaganeshyouthguntur.duckdns.org/' });
     this.meta.updateTag({ property: 'og:image', content: 'https://ganesh-rho.vercel.app/assets/l.jpg' });
     this.meta.updateTag({ property: 'twitter:title', content: 'Bala Ganesh Youth Community | Vinayaka Chavitihi Festival Housing Board Guntur' });
     this.meta.updateTag({ property: 'twitter:description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Join our yearly celebrations, photo galleries, and festival updates.' });
