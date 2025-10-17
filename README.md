@@ -1,6 +1,6 @@
-# Website
+# Vinayaka Chavitihi Festival Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+This project is a website for the Bala Ganesh Youth Community celebrating the Vinayaka Chavitihi (Ganesh Chaturthi) festival at Housing Board Guntur (APHB Guntur).
 
 ## Development server
 
@@ -13,6 +13,20 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Deployment to Netlify
+
+This project is configured for deployment to Netlify with the following settings:
+
+1. Build command: `npm run build`
+2. Publish directory: `dist/website`
+3. The `_redirects` file handles client-side routing for Angular
+4. The `netlify.toml` file contains additional configuration
+
+To deploy:
+1. Connect your GitHub repository to Netlify
+2. Select this repository
+3. Netlify will automatically use the settings from `netlify.toml`
 
 ## Running unit tests
 
