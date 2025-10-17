@@ -42,6 +42,10 @@ To configure this domain:
 
 Since this uses DuckDNS (dynamic DNS), you'll need to ensure your DuckDNS client points to your Netlify site.
 
+## Google Search Console Verification
+
+The site includes a Google verification file (`googlee5531cdc5aaa54ab.html`) for Google Search Console. This file is automatically copied to the root of the build output directory.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
