@@ -12,13 +12,13 @@ export class Year2025Component implements OnInit {
 
   ngOnInit() {
     this.meta.updateTag({ name: 'title', content: 'Bala Ganesh Youth Community 2025 | Vinayaka Chavitihi Festival Housing Board Guntur' });
-    this.meta.updateTag({ name: 'description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2025 Vinayaka Chavitihi Festival Celebration. Find event schedules, greetings, cultural programs, and celebration details for this auspicious Hindu festival.' });
+    this.meta.updateTag({ name: 'description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2025 Vinayaka Chavitihi Festival Celebration. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Find event schedules, greetings, cultural programs, and celebration details for this auspicious Hindu festival.' });
     this.meta.updateTag({ property: 'og:title', content: 'Bala Ganesh Youth Community 2025 | Vinayaka Chavitihi Festival Housing Board Guntur' });
-    this.meta.updateTag({ property: 'og:description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2025 Vinayaka Chavitihi Festival Celebration. Find event schedules, greetings, cultural programs, and celebration details for this auspicious Hindu festival.' });
+    this.meta.updateTag({ property: 'og:description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2025 Vinayaka Chavitihi Festival Celebration. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Find event schedules, greetings, cultural programs, and celebration details for this auspicious Hindu festival.' });
     this.meta.updateTag({ property: 'og:url', content: 'http://balaganeshyouthguntur.duckdns.org/2025' });
     this.meta.updateTag({ property: 'og:image', content: 'https://images.pexels.com/photos/8686200/pexels-photo-8686200.jpeg?auto=compress&cs=tinysrgb&w=600' });
     this.meta.updateTag({ property: 'twitter:title', content: 'Bala Ganesh Youth Community 2025 | Vinayaka Chavitihi Festival Housing Board Guntur' });
-    this.meta.updateTag({ property: 'twitter:description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2025 Vinayaka Chavitihi Festival Celebration. Find event schedules, greetings, cultural programs, and celebration details for this auspicious Hindu festival.' });
+    this.meta.updateTag({ property: 'twitter:description', content: 'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2025 Vinayaka Chavitihi Festival Celebration. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Find event schedules, greetings, cultural programs, and celebration details for this auspicious Hindu festival.' });
     this.meta.updateTag({ property: 'twitter:image', content: 'https://images.pexels.com/photos/8686200/pexels-photo-8686200.jpeg?auto=compress&cs=tinysrgb&w=600' });
   }
 
