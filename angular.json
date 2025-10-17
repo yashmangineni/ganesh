@@ -23,7 +23,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              "src/_redirects",
+              {
+                "glob": "google*.html",
+                "input": "src/assets/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -86,7 +91,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              "src/_redirects",
+              {
+                "glob": "google*.html",
+                "input": "src/assets/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
