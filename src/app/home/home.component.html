@@ -1,0 +1,83 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">🕉️ Bala Ganesh Youth Celebrations</h1>
+      <p class="hero-subtitle">Celebrating Lord Ganesha with devotion and joy</p>
+      <div class="hero-image">
+        <img src="assets/l.jpg" alt="Festival Location" />
+      </div>
+    </div>
+  </section>
+
+  <section class="years-section">
+    <div class="container">
+      <h2 class="section-title">Explore Our Festival Years</h2>
+      <div class="years-grid">
+        
+        <div class="year-card special" routerLink="/2025">
+          <div class="year-card-content">
+            <h3>2025</h3>
+            <p>Welcome & Greetings</p>
+            <div class="card-features">
+              <span class="feature">🙏 Welcome Messages</span>
+              <span class="feature">🎉 Festival Greetings</span>
+              <span class="feature">✨ Special Celebrations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-card" routerLink="/2024">
+          <div class="year-card-content">
+            <h3>2024</h3>
+            <p>Pictures, Videos & Teams</p>
+            <div class="card-features">
+              <span class="feature">📸 Photo Gallery</span>
+              <span class="feature">🎥 Video Collection</span>
+              <span class="feature">👥 committee members</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-card" routerLink="/2023">
+          <div class="year-card-content">
+            <h3>2023</h3>
+            <p>Pictures, Videos & Teams</p>
+            <div class="card-features">
+              <span class="feature">📸 Photo Gallery</span>
+              <span class="feature">🎥 Video Collection</span>
+              <span class="feature">👥 committee members</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">About Vinayaka Chavitihi</h2>
+      <p class="about-text">
+        Vinayaka Chavitihi, also known as Ganesh Chaturthi, is one of the most celebrated festivals in India. 
+        It honors Lord Ganesha, the remover of obstacles and the patron of arts and sciences. 
+        Our community comes together every year to celebrate this auspicious occasion with great devotion and enthusiasm.
+      </p>
+      
+      <div class="about-actions">
+        <button class="about-btn" (click)="toggleCommitteeMembers()">
+          {{showCommitteeMembers ? 'Hide Committee Members' : 'Show Committee Members'}}
+        </button>
+      </div>
+
+      <div class="committee-section" *ngIf="showCommitteeMembers">
+        <h3 class="committee-title">🏛️ Festival Committee Members</h3>
+        <div class="committee-grid">
+          <div class="committee-member" *ngFor="let member of committeeMembers">
+            <div class="member-card">
+              <h4>{{member.name}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,78 @@
+<div class="year-container">
+  <div class="header">
+    <h1>🕉️ Welcome to 2025</h1>
+    <p>Vinayaka Chavitihi Festival Celebration</p>
+  </div>
+
+  <div class="container">
+    <section class="welcome-section">
+      <div class="welcome-card">
+        <h2>🙏 Welcome Message</h2>
+        <p class="welcome-text">
+          As we step into 2025, we extend our heartfelt welcome to all devotees and community members 
+          for the grand celebration of Vinayaka Chavitihi. This auspicious festival brings us together 
+          in devotion, joy, and spiritual harmony. May Lord Ganesha bless us with wisdom, prosperity, 
+          and remove all obstacles from our path.
+        </p>
+      </div>
+    </section>
+
+    <section class="greetings-section">
+      <h2>🎉 Festival Greetings</h2>
+      <div class="greetings-grid">
+        <div class="greeting-card" *ngFor="let greeting of greetings">
+          <div class="greeting-icon">{{greeting.icon}}</div>
+          <h3>{{greeting.title}}</h3>
+          <p>{{greeting.message}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="celebration-section">
+      <h2>✨ Special Celebrations 2025</h2>
+      <div class="celebration-timeline">
+        <div class="timeline-item" *ngFor="let event of celebrations">
+          <div class="timeline-marker">{{event.day}}</div>
+          <div class="timeline-content">
+            <h3>{{event.title}}</h3>
+            <p>{{event.description}}</p>
+            <span class="time">{{event.time}}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blessing-section">
+      <div class="blessing-card">
+        <img src="https://images.pexels.com/photos/8686200/pexels-photo-8686200.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lord Ganesha" />
+        <div class="blessing-content">
+          <h2>🙏 Blessings for 2025</h2>
+          <p>
+            May Lord Ganesha, the remover of obstacles and the patron of arts and sciences, 
+            shower his divine blessings upon all of us. As we celebrate this sacred festival, 
+            let us embrace the spirit of unity, devotion, and joy that brings our community together.
+          </p>
+          <div class="blessing-quote">
+            <em>"गणपति बप्पा मोरया, मंगलमूर्ति मोरया"</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="invitation-section">
+      <div class="invitation-card">
+        <h2>🎊 Join Our Celebration</h2>
+        <p>
+          We cordially invite you and your family to join us in the grand celebration of 
+          Vinayaka Chavitihi 2025. Together, let us create beautiful memories and seek 
+          the blessings of Lord Ganesha.
+        </p>
+        <div class="contact-info">
+          <p><strong>📅 Festival Dates:</strong> Coming Soon</p>
+          <p><strong>📍 Location:</strong> Housing Board, Guntur</p>
+          <p><strong>📞 Contact:</strong> +91 9989101941</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
