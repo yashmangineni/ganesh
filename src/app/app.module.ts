@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { Year2023Component } from './year-2023/year-2023.component';
 import { Year2024Component } from './year-2024/year-2024.component';
 import { Year2025Component } from './year-2025/year-2025.component';
+import { Year2026Component } from './year-2026/year-2026.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { Year2025Component } from './year-2025/year-2025.component';
     HomeComponent,
     Year2023Component,
     Year2024Component,
-    Year2025Component
+    Year2025Component,
+    Year2026Component
   ],
   imports: [
     BrowserModule,
