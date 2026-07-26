@@ -96,20 +96,23 @@
         </p>
 
         <div class="seva-qr-block">
-          <a
-            [href]="paymentUrl"
-            class="seva-qr-link"
-            aria-label="Open a UPI payment app to contribute"
-            (click)="pay()"
-          >
-            <img src="assets/qrcode.jpeg" alt="UPI payment QR code" class="seva-qr-image" />
-          </a>
+  <img
+    src="assets/qrcode.jpeg"
+    alt="UPI QR"
+    class="seva-qr-image"
+    (click)="pay()"
+    style="cursor:pointer;"
+  />
 
-          <p class="seva-account-holder">
-            <span class="seva-account-label">A/c Holder:</span>
-            Kolagani Chandra Mouli
-          </p>
-        </div>
+  <p class="seva-qr-text">
+    📱 Tap the QR Code to pay using any UPI app
+  </p>
+
+  <p class="seva-account-holder">
+    <span class="seva-account-label">A/c Holder:</span>
+    Kolagani Chandra Mouli
+  </p>
+</div>
       </div>
     </div>
   </section>
