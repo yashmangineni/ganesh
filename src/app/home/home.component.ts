@@ -35,10 +35,7 @@ export class HomeComponent implements OnInit {
     { name: 'D Gowtham' },
     { name: 'H Praveen' },
     { name: 'P Rahul' },
-    ,
     {name : 'Barath' },
-  
-    
     { name: 'Yaswanth' },
     { name: 'Prudhvi' },
     { name: 'Narendhra' },
