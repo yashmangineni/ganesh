@@ -39,40 +39,28 @@
     </section>
 
     <section class="payment-section">
-      <h3>💝 Support the Celebration (Scan to Pay)</h3>
-      <p class="payment-note">Scan the QR code below with a payment app, or paste the payment URL into your browser.</p>
-      <p class="funds-usage">Funds collected will be used for puja arrangements, decorations, community meals, immersion logistics, and to support local artists and volunteers. Transparent accounting will be provided after the event.</p>
-      <div class="payment-grid">
-        <button
-          *ngIf="useUploadedQrImage; else generatedQrImage"
-          type="button"
-          class="qr-trigger"
-          (click)="pay()"
-          aria-label="Open payment app"
-        >
-          <img
-            [src]="uploadedQrImage"
-            alt="PhonePe QR code to donate"
-            class="qr-image"
-            (error)="handleUploadedQrError()"
-          />
-        </button>
-        <ng-template #generatedQrImage>
-          <button
-            type="button"
-            class="qr-trigger"
-            (click)="pay()"
-            aria-label="Open payment app"
-          >
-            <img [src]="getQrSrc()" alt="QR code to donate" class="qr-image" />
-          </button>
-        </ng-template>
-        <div class="payment-actions">
-          <label for="paymentUrl">Payment URL</label>
-          <input id="paymentUrl" type="text" [value]="paymentUrl" (input)="paymentUrl = $event.target.value" />
-          <button (click)="pay()">Open Payment Link</button>
-        </div>
-      </div>
-    </section>
+  <h3>💝 Support the Celebration</h3>
+
+  <p>
+    Click the QR Code below to pay using PhonePe, Google Pay, Paytm or any UPI
+    app.
+  </p>
+
+  <div class="payment-grid">
+
+    <button
+      class="qr-trigger"
+      type="button"
+      (click)="pay()">
+
+      <img
+        src="assets/qrcode.jpeg"
+        class="qr-image"
+        alt="PhonePe QR">
+
+    </button>
+
+  </div>
+</section>
   </div>
 </div>

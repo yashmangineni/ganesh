@@ -334,3 +334,25 @@
   .payment-grid { justify-content: center; }
 }
 
+.payment-section{
+    text-align:center;
+    margin-top:30px;
+}
+
+.qr-trigger{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+.qr-image{
+    width:250px;
+    height:250px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.qr-image:hover{
+    transform:scale(1.05);
+}
