@@ -195,18 +195,6 @@
   margin-top: 2rem;
 }
 
-.seva-qr-link {
-  display: inline-block;
-  border-radius: 18px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.seva-qr-link:hover,
-.seva-qr-link:focus-visible {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
-}
-
 .seva-qr-image {
   width: min(260px, 78vw);
   border-radius: 18px;

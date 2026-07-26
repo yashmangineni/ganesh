@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
     this.showCommitteeMembers = !this.showCommitteeMembers;
   }
 
-  pay() {
-    window.location.href = this.paymentUrl;
-  }
+ pay() {
+  window.open(this.paymentUrl, '_self');
+}
 }
