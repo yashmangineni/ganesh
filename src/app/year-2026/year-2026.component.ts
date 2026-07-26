@@ -79,23 +79,21 @@ export class Year2026Component implements OnInit {
     { day: 'Day 5', date: 'Sep 18, 2026', title: 'Nimarjanam & Farewell', details: 'Final rituals and immersion ceremony.' }
   ];
 
-  // Payment/donation URL used to generate QR code for scanners
-  paymentUrl = 'https://example.com/donate';
+  // Replace with your actual UPI ID
+paymentUrl =
+  'upi://pay?pa=9989101941-2@axl&pn=Bala Ganesh Youth Community&cu=INR';
 
-  // returns a Google Chart API QR code image for the payment URL
-  getQrSrc(): string {
-    return 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' + encodeURIComponent(this.paymentUrl);
-  }
+// Open PhonePe / Google Pay / Paytm
+pay() {
+  window.location.href = this.paymentUrl;
+}
 
-  pay() {
-    window.open(this.paymentUrl, '_blank');
-  }
+handleUploadedQrError() {
+  this.useUploadedQrImage = false;
+}
 
-  handleUploadedQrError() {
-    this.useUploadedQrImage = false;
-  }
-
-  toggleGreetings() {
-    this.showGreetings = !this.showGreetings;
-  }
+getQrSrc(): string {
+  return 'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=' +
+    encodeURIComponent(this.paymentUrl);
+}
 }
