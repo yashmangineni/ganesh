@@ -7,6 +7,8 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  paymentUrl =
+    'upi://pay?pa=9989101941-2@axl&pn=Bala Ganesh Youth Community&cu=INR';
 
   constructor(private meta: Meta) {}
 
@@ -52,5 +54,9 @@ export class HomeComponent implements OnInit {
 
   toggleCommitteeMembers() {
     this.showCommitteeMembers = !this.showCommitteeMembers;
+  }
+
+  pay() {
+    window.location.href = this.paymentUrl;
   }
 }
