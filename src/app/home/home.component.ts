@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
 
   committeeMembers = [
     { name: 'K Chandra Mouli' },
+    { name: 'M Yaswanth' },
     { name: 'B Ashok' },
     { name: 'D Sri Hari' },
     { name: 'P Vivek' },
@@ -41,6 +42,13 @@ export class HomeComponent implements OnInit {
     { name: 'Narendhra' },
     { name: 'G Prabhakar' },
     { name: 'P Bhargav' },
+    { name: 'Dinesh' },
+    { name: 'Chinnu' },
+    { name: 'Surendra' },
+    { name: 'Chaitanya' },
+    { name: 'Lokesh' },
+    { name: 'Nikendra' }
+
   ];
 
   toggleCommitteeMembers() {
