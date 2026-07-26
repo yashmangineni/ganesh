@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
 
   committeeMembers = [
     { name: 'K Chandra Mouli' },
-    { name: 'M Yaswanth' },
     { name: 'B Ashok' },
     { name: 'D Sri Hari' },
     { name: 'P Vivek' },
