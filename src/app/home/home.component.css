@@ -208,6 +208,22 @@
   color: #d35400;
 }
 
+.seva-account-holder {
+  margin: 0;
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #5f4b32;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.seva-account-label {
+  font-weight: 700;
+  color: #8d3c16;
+}
+
 .about-section {
   background: white;
   padding: 4rem 2rem;
