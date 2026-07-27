@@ -21,21 +21,17 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/_redirects",
-              "src/sitemap.xml",
-              {
-                "glob": "google*.html",
-                "input": "src/assets/",
-                "output": "/"
-              },
-              {
-                "glob": "sitemap.xml",
-                "input": "src/assets/",
-                "output": "/"
-              }
-            ],
+  "src/favicon.ico",
+  "src/assets",
+  "src/_redirects",
+  "src/robots.txt",
+  "src/sitemap.xml",
+  {
+    "glob": "google*.html",
+    "input": "src/assets/",
+    "output": "/"
+  }
+],
             "styles": [
               "src/styles.css"
             ],
@@ -98,6 +94,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/_redirects",
+              
               {
                 "glob": "google*.html",
                 "input": "src/assets/",

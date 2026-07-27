@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://balaganeshyouthguntur.duckdns.org/sitemap.xml
