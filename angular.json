@@ -25,7 +25,7 @@
   "src/assets",
   "src/_redirects",
   "src/robots.txt",
-  "src/sitemap.xml",
+  "src/sitemapadd.xml",
   {
     "glob": "google*.html",
     "input": "src/assets/",
