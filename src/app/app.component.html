@@ -1,15 +1,70 @@
 <div class="app-container">
   <nav class="navbar">
-    <div class="nav-brand">
-      <h1>🕉️ Ganesh Utsav Celebrations</h1>
-    </div>
-    <div class="nav-links">
-      <a routerLink="/" class="nav-link">Home</a>
+    <button
+      type="button"
+      class="menu-toggle"
+      [class.is-open]="isMobileMenuOpen"
+      [attr.aria-expanded]="isMobileMenuOpen"
+      aria-label="Open navigation menu"
+      (click)="toggleMobileMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <a routerLink="/2026" class="nav-link">2026</a>
-      <a routerLink="/2025" class="nav-link">2025</a>
-      <a routerLink="/2024" class="nav-link">2024</a>
-      <a routerLink="/2023" class="nav-link">2023</a>
+    <div class="nav-brand">
+      <h1> 🕉️ Ganesh Utsav Celebrations</h1>
+    </div>
+
+    <div
+      class="nav-overlay"
+      [class.is-open]="isMobileMenuOpen"
+      (click)="closeMobileMenu()"
+    ></div>
+
+    <div class="nav-links" [class.is-open]="isMobileMenuOpen">
+      <a
+        routerLink="/"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link"
+        (click)="closeMobileMenu()"
+      >
+        Home
+      </a>
+      <a
+        routerLink="/2026"
+        routerLinkActive="is-active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
+      >
+        2026
+      </a>
+      <a
+        routerLink="/2025"
+        routerLinkActive="is-active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
+      >
+        2025
+      </a>
+      <a
+        routerLink="/2024"
+        routerLinkActive="is-active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
+      >
+        2024
+      </a>
+      <a
+        routerLink="/2023"
+        routerLinkActive="is-active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
+      >
+        2023
+      </a>
     </div>
   </nav>
 
