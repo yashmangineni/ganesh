@@ -1,147 +1,271 @@
 <div class="home-container">
+
+  <!-- ================= HERO SECTION ================= -->
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">🕉️ Bala Ganesh Youth Community </h1>
-      <p class="hero-subtitle">Sep 14–18, 2026 — Festival & Invitation</p>
-      <div class="hero-image">
-        <img src="assets/l.jpeg" alt="Festival Location" />
+
+      <h1 class="hero-title">
+  <span class="hero-title-trishul">🔱</span>
+  <span>Team ShivaPutra Youth Housing Board Colony</span>
+</h1>
+
+      <p class="hero-subtitle">
+        Sep 14–18, 2026 — Festival & Invitation
+      </p>
+
+      <div class="greeting-banner">
+        <div class="greeting-text">
+          <h2>2026 Invitation — Team ShivaPutra Welcomes You</h2>
+          <p>Join us Sep 14–18, 2026 for festivities, blessings, photo galleries and cultural programs. All are welcome — bring family and friends.</p>
+        </div>
+        <a routerLink="/2026" class="greeting-cta">View 2026 Events</a>
       </div>
+
+      <div class="hero-image">
+        <img
+          [src]="currentHeroImage"
+          alt="Team ShivaPutra Youth Housing Board Colony Logo"
+        />
+      </div>
+
     </div>
   </section>
 
+
+  <!-- ================= YEARS SECTION ================= -->
   <section class="years-section">
     <div class="container">
-      <h2 class="section-title">Explore Our Festival Years</h2>
+
+      <h2 class="section-title">
+        Explore Our Festival Years
+      </h2>
+
       <div class="years-grid">
 
+        <!-- 2026 -->
         <div class="year-card" routerLink="/2026">
           <div class="year-card-content">
-            <h3>2026</h3>
+
+            <h4>Team ShivaPutra - 2026 Ganesh Utsav Celebrations</h4>
+
             <p>Greetings, Photos & Videos</p>
+
             <div class="card-features">
               <span class="feature">💬 Greetings</span>
               <span class="feature">📸 Photo Gallery</span>
               <span class="feature">🎥 Videos - 5 Day Nimarjanam</span>
             </div>
+
           </div>
         </div>
-        
+
+
+        <!-- 2025 -->
         <div class="year-card" routerLink="/2025">
           <div class="year-card-content">
-            <h3>2025</h3>
+
+            <h4>Team ShivaPutra - 2025 Ganesh Utsav Celebrations</h4>
+
             <p>Pictures & Videos</p>
+
             <div class="card-features">
               <span class="feature">📸 Photo Gallery</span>
               <span class="feature">🎥 Video Collection</span>
               <span class="feature">✨ Celebration Memories</span>
             </div>
+
           </div>
         </div>
 
+
+        <!-- 2024 -->
         <div class="year-card" routerLink="/2024">
           <div class="year-card-content">
-            <h3>2024</h3>
-            <p>Pictures, Videos </p>
+
+            <h4>Team ShivaPutra - 2024 Ganesh Utsav Celebrations</h4>
+
+            <p>Pictures & Videos</p>
+
             <div class="card-features">
               <span class="feature">📸 Photo Gallery</span>
               <span class="feature">🎥 Video Collection</span>
               <span class="feature">✨ Celebration Memories</span>
             </div>
+
           </div>
         </div>
 
+
+        <!-- 2023 -->
         <div class="year-card" routerLink="/2023">
           <div class="year-card-content">
-            <h3>2023</h3>
-            <p>Pictures, Videos </p>
+
+            <h4>Team ShivaPutra - 2023 Ganesh Utsav Celebrations</h4>
+
+            <p>Pictures & Videos</p>
+
             <div class="card-features">
               <span class="feature">📸 Photo Gallery</span>
               <span class="feature">🎥 Video Collection</span>
               <span class="feature">✨ Celebration Memories</span>
             </div>
+
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="seva-section">
+
+  <!-- ================= SEVA SECTION ================= -->
+  <section id="seva-section" class="seva-section">
     <div class="container">
+
       <div class="seva-card">
-        <h2 class="section-title seva-title">🌺 Ganesh Utsav Seva</h2>
+
+        <h2 class="section-title seva-title">
+          🌺 Team ShivaPutra Ganesh Utsav Seva
+        </h2>
+
         <p class="seva-text">
-          Join us in serving Lord Ganesha by contributing towards the Ganesh Utsav celebrations.
-          Your support will help us organize the festival successfully.
+          Join us in serving Lord Ganesha by contributing towards the
+          Ganesh Utsav celebrations. Your support will help us organize
+          the festival successfully.
         </p>
+
 
         <ul class="seva-list">
+
           <li>🛕 Ganesh Idol & Puja</li>
+
           <li>🌸 Decorations & Lighting</li>
+
           <li>🥣 Annadanam (Free Meals)</li>
+
           <li>🎶 Cultural Programs</li>
+
           <li>🚩 Ganesh Nimajjanam Arrangements</li>
+
         </ul>
 
+
         <p class="seva-highlight">
-          🌼 No contribution is too small. Every amount offered with devotion is valuable and helps
-          make the celebration successful.
+          🌼 No contribution is too small. Every amount offered with
+          devotion is valuable and helps make the celebration successful.
         </p>
+
 
         <p class="seva-blessing">
-          🙏 May Lord Ganesha bless you and your family with happiness, health, and prosperity.
+          🙏 May Lord Ganesha bless you and your family with happiness,
+          health, and prosperity.
         </p>
+
 
         <p class="seva-qr-text">
-          Tap the QR Code to contribute using PhonePe, Google Pay, Paytm or any UPI app.
+          Tap the QR Code to contribute using PhonePe,
+          Google Pay, Paytm or any UPI app.
         </p>
 
+
         <div class="seva-qr-block">
-  <img
-    src="assets/qrcode.jpeg"
-    alt="UPI QR"
-    class="seva-qr-image"
-    (click)="pay()"
-    style="cursor:pointer;"
-  />
 
-  <p class="seva-qr-text">
-    📱 Tap the QR Code to pay using any UPI app
-  </p>
+          <img
+            src="assets/qrcode.jpeg"
+            alt="UPI QR"
+            class="seva-qr-image"
+            (click)="pay()"
+          />
 
-  <p class="seva-account-holder">
-    <span class="seva-account-label">A/c Holder:</span>
-    Kolagani Chandra Mouli
-  </p>
-</div>
-      </div>
-    </div>
-  </section>
+          
 
-  <section class="about-section">
-    <div class="container">
-      <h2 class="section-title">About Vinayaka Chavitihi</h2>
-      <p class="about-text">
-        Vinayaka Chavitihi, also known as Ganesh Chaturthi, is one of the most celebrated festivals in India. 
-        It honors Lord Ganesha, the remover of obstacles and the patron of arts and sciences. 
-        Our community comes together every year to celebrate this auspicious occasion with great devotion and enthusiasm.
-      </p>
-      
-      <div class="about-actions">
-        <button class="about-btn" (click)="toggleCommitteeMembers()">
-          {{showCommitteeMembers ? 'Hide Committee Members' : 'Show Committee Members'}}
-        </button>
-      </div>
 
-      <div class="committee-section" *ngIf="showCommitteeMembers">
-        <h3 class="committee-title">🏛️ Festival Committee Members</h3>
-        <div class="committee-grid">
-          <div class="committee-member" *ngFor="let member of committeeMembers">
-            <div class="member-card">
-              <h4>{{member.name}}</h4>
-            </div>
-          </div>
+          <p class="seva-account-holder">
+            <span class="seva-account-label">
+              A/c Holder:
+            </span>
+
+            Kolagani Chandra Mouli
+          </p>
+
         </div>
+
       </div>
+
     </div>
   </section>
+
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about-section" class="about-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        About Vinayaka Chavithi
+      </h2>
+
+
+      <p class="about-text">
+        Vinayaka Chavithi, also known as Ganesh Chaturthi,
+        is one of the most celebrated festivals in India.
+        It honors Lord Ganesha, the remover of obstacles and
+        the patron of arts and sciences.
+        Our community comes together every year to celebrate
+        this auspicious occasion with great devotion and enthusiasm.
+      </p>
+
+
+      <div class="about-actions">
+
+        <button
+          class="about-btn"
+          (click)="toggleCommitteeMembers()"
+        >
+          {{
+            showCommitteeMembers
+              ? 'Hide Committee Members'
+              : 'Show Committee Members'
+          }}
+        </button>
+
+      </div>
+
+
+      <div
+        id="committee-section"
+        class="committee-section"
+        *ngIf="showCommitteeMembers"
+      >
+
+        <h3 class="committee-title">
+          🏛️ Team ShivaPutra committee members for Vinayaka Chavithi
+        </h3>
+
+
+        <div class="committee-grid">
+
+          <div
+            class="committee-member"
+            *ngFor="let member of committeeMembers"
+          >
+
+            <div class="member-card">
+
+              <h4>
+                {{ member.name }}
+              </h4>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </div>
