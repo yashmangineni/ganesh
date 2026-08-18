@@ -14,7 +14,7 @@
     </button>
 
     <div class="nav-brand">
-      <h1> 🕉️ Ganesh Utsav Celebrations</h1>
+      <h1>ॐ Team ShivaPutra | Ganesh Ustav Celebrations</h1>
     </div>
 
     <div
@@ -24,47 +24,22 @@
     ></div>
 
     <div class="nav-links" [class.is-open]="isMobileMenuOpen">
-      <a
-        routerLink="/"
-        routerLinkActive="is-active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="nav-link"
-        (click)="closeMobileMenu()"
-      >
-        Home
-      </a>
-      <a
-        routerLink="/2026"
-        routerLinkActive="is-active"
-        class="nav-link"
-        (click)="closeMobileMenu()"
-      >
-        2026
-      </a>
-      <a
-        routerLink="/2025"
-        routerLinkActive="is-active"
-        class="nav-link"
-        (click)="closeMobileMenu()"
-      >
-        2025
-      </a>
-      <a
-        routerLink="/2024"
-        routerLinkActive="is-active"
-        class="nav-link"
-        (click)="closeMobileMenu()"
-      >
-        2024
-      </a>
-      <a
-        routerLink="/2023"
-        routerLinkActive="is-active"
-        class="nav-link"
-        (click)="closeMobileMenu()"
-      >
-        2023
-      </a>
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link" (click)="navigateHome(); closeMobileMenu()">Home</a>
+      <a routerLink="/2026" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">Invitation</a>
+
+      <details class="nav-dropdown">
+        <summary class="nav-link summary">Past Years ▾</summary>
+        <div class="dropdown-items">
+          <a routerLink="/2025" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2025</a>
+          <a routerLink="/2024" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2024</a>
+          <a routerLink="/2023" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2023</a>
+        </div>
+      </details>
+
+     
+      <a routerLink="/" fragment="seva" class="nav-link" (click)="closeMobileMenu()">Seva</a>
+
+      <a routerLink="/" fragment="about" class="nav-link" (click)="closeMobileMenu()">About</a>
     </div>
   </nav>
 
@@ -73,7 +48,7 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Vinayaka Chavitihi Festival Celebration. All rights reserved</p>
+    <p>&copy; 2025 Vinayaka Chavithi Festival Celebration. All rights reserved</p>
     <p>&copy; Created by Yash Tech Creations</p>
   </footer>
 </div>

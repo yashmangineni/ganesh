@@ -23,6 +23,19 @@
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  object-fit: contain;
+  display: inline-block;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
 }
 
 .menu-toggle {
@@ -69,6 +82,49 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
+}
+
+/* Dropdown (Past Years) styles */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .summary {
+  cursor: pointer;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-dropdown .dropdown-items {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 10rem;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 0.5rem;
+  z-index: 1002;
+}
+
+.nav-dropdown[open] .dropdown-items {
+  display: flex;
+}
+
+.nav-dropdown .dropdown-items .nav-link {
+  color: #222;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.nav-dropdown .dropdown-items .nav-link:hover {
+  background: rgba(0,0,0,0.04);
 }
 
 .nav-link {
@@ -156,6 +212,19 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1001;
+  }
+
+  /* Mobile: make dropdown items flow inside the panel */
+  .nav-dropdown .dropdown-items {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav-dropdown .dropdown-items .nav-link {
+    color: white;
+    padding-left: 1rem;
   }
 
   .nav-links.is-open {
