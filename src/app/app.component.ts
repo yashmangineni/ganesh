@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Vinayaka Chavitihi Festival';
   isMobileMenuOpen = false;
+  showWelcomePopup = true;
 
   constructor(private router: Router) {}
 
@@ -29,5 +30,9 @@ export class AppComponent {
 
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
+  }
+
+  closeWelcomePopup(): void {
+    this.showWelcomePopup = false;
   }
 }

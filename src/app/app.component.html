@@ -14,7 +14,12 @@
     </button>
 
     <div class="nav-brand">
-      <h1>ॐ Team ShivaPutra | Ganesh Ustav Celebrations</h1>
+      <img
+        class="brand-logo"
+        src="assets/shiva.png"
+        alt="Team Shivaputra Youth logo"
+      />
+      <h1>Team Shivaputra Youth</h1>
     </div>
 
     <div
@@ -51,4 +56,38 @@
     <p>&copy; 2025 Vinayaka Chavithi Festival Celebration. All rights reserved</p>
     <p>&copy; Created by Yash Tech Creations</p>
   </footer>
+</div>
+
+<div
+  class="welcome-popup-backdrop"
+  *ngIf="showWelcomePopup"
+  role="presentation"
+  (click)="closeWelcomePopup()"
+>
+  <section
+    class="welcome-popup"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="welcome-popup-title"
+    (click)="$event.stopPropagation()"
+  >
+    <button
+      type="button"
+      class="welcome-popup-close"
+      aria-label="Close welcome message"
+      (click)="closeWelcomePopup()"
+    >
+      &times;
+    </button>
+
+    <div class="welcome-popup-icon" aria-hidden="true">🙏</div>
+    <p class="welcome-popup-eyebrow">Team Shivaputra Youth</p>
+    <h2 id="welcome-popup-title">Happy Vinayaka Chavithi!</h2>
+    <p class="welcome-popup-message">
+      Thank you for visiting our website. May Lord Ganesha bless you and your family with happiness, peace, and prosperity.
+    </p>
+    <button type="button" class="welcome-popup-button" (click)="closeWelcomePopup()">
+      Enter Website
+    </button>
+  </section>
 </div>
