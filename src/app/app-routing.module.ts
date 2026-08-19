@@ -5,15 +5,24 @@ import { Year2023Component } from './year-2023/year-2023.component';
 import { Year2024Component } from './year-2024/year-2024.component';
 import { Year2025Component } from './year-2025/year-2025.component';
 import { Year2026Component } from './year-2026/year-2026.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsComponent } from './terms/terms.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
 
-   { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms', component: TermsComponent },
   { path: '2023', component: Year2023Component },
   { path: '2024', component: Year2024Component },
   { path: '2025', component: Year2025Component },
   { path: '2026', component: Year2026Component },
-  { path: '**', redirectTo: '' }
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

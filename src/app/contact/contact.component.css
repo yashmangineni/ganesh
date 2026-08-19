@@ -1,0 +1,153 @@
+.contact-page {
+  min-height: 100vh;
+  background: #fff8ef;
+  color: #40332d;
+}
+
+.contact-heading {
+  padding: clamp(3.5rem, 8vw, 6rem) 1.5rem;
+  background: #18110e;
+  color: white;
+  text-align: center;
+}
+
+.contact-heading h1 {
+  margin: 0.5rem 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+.contact-heading p:last-child {
+  margin: 0;
+  color: #b9b6bd;
+  font-size: 1.05rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #ff7147;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
+  gap: 4rem;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.contact-copy h2 {
+  margin-top: 0;
+  color: #b43a2d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+}
+
+.contact-copy p {
+  color: #66564d;
+  line-height: 1.8;
+}
+
+.contact-address {
+  display: grid;
+  gap: 0.4rem;
+  margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #ff5b2d;
+  color: #66564d;
+  line-height: 1.6;
+}
+
+.phone-link {
+  color: #df4c25;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.55rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: white;
+  box-shadow: 0 14px 35px rgba(82, 42, 20, 0.12);
+}
+
+.contact-form label {
+  margin-top: 0.6rem;
+  color: #4b3b34;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #dfd2c8;
+  border-radius: 0.35rem;
+  background: #fffdfa;
+  color: #332720;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(255, 91, 45, 0.25);
+  border-color: #ff5b2d;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.9rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: #ff5b2d;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+@media (max-width: 700px) {
+  .contact-heading {
+    padding: 3.25rem 1rem;
+  }
+
+  .contact-heading h1 {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+  }
+
+  .contact-heading p:last-child {
+    line-height: 1.55;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 1rem 4rem;
+  }
+
+  .contact-copy h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}

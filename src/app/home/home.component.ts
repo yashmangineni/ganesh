@@ -43,48 +43,9 @@ export class HomeComponent implements OnInit {
         if (fragment === 'seva') {
           const el = document.getElementById('seva-section');
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else if (fragment === 'committee') {
-          this.showCommitteeMembers = true;
-          const el = document.getElementById('committee-section');
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else if (fragment === 'about') {
-          const el = document.getElementById('about-section');
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 80);
     });
-  }
-
- showCommitteeMembers = false;
-
-  committeeMembers = [
-    { name: 'K Chandra Mouli' },
-    { name: 'B Ashok' },
-    { name: 'D Sri Hari' },
-    { name: 'P Vivek' },
-    { name: 'B Balaji' },
-    { name: 'G Sunny' },
-    { name: 'M Bhanu' },
-    { name: 'D Gowtham' },
-    { name: 'H Praveen' },
-    { name: 'P Rahul' },
-    {name : 'Barath' },
-    { name: 'Yaswanth' },
-    { name: 'Prudhvi' },
-    { name: 'Narendhra' },
-    { name: 'G Prabhakar' },
-    { name: 'P Bhargav' },
-    { name: 'Dinesh' },
-    { name: 'Chinnu' },
-    { name: 'Surendra' },
-    { name: 'Chaitanya' },
-    { name: 'Lokesh' },
-    { name: 'Nikendra' }
-
-  ];
-
-  toggleCommitteeMembers() {
-    this.showCommitteeMembers = !this.showCommitteeMembers;
   }
 
   toggleHeroImage() {

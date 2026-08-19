@@ -4,7 +4,7 @@
 
   <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-content home-reveal home-reveal-first">
 
       <h1 class="hero-title">
 
@@ -12,7 +12,7 @@
           🔱
         </span>
 
-        <span>
+        <span class="hero-name-scroll">
           Team Shivaputra Youth Housing Board Colony
         </span>
 
@@ -67,12 +67,50 @@
   </section>
 
 
+  <section class="home-information home-reveal home-reveal-second">
+    <div class="container">
+      <div class="information-heading">
+        <p class="information-eyebrow">Our community and celebration</p>
+        <h2 class="section-title">Together in devotion, culture and service</h2>
+        <p>
+          Team Shivaputra Youth brings the families and young people of Housing Board Colony,
+          Guntur together to celebrate Lord Ganesha and support our community.
+        </p>
+      </div>
+
+      <div class="information-grid">
+        <article class="information-card information-card-reveal">
+          <span class="information-icon" aria-hidden="true">🤝</span>
+          <h3>Our Team</h3>
+          <p>
+            We are a local youth team built on friendship, responsibility and devotion. Every
+            member contributes time and energy to make the celebrations welcoming for families,
+            friends and visitors.
+          </p>
+          <a routerLink="/about">Meet our community <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="information-card information-card-reveal information-card-reveal-late">
+          <span class="information-icon" aria-hidden="true">🐘</span>
+          <h3>Ganesh Chaturthi</h3>
+          <p>
+            Ganesh Chaturthi, or Vinayaka Chavithi, celebrates the arrival of Lord Ganesha, the
+            remover of obstacles. Our Utsav includes puja, decorations, cultural programs,
+            Annadanam and Nimajjanam with everyone in Guntur.
+          </p>
+          <a routerLink="/2026">See the 2026 celebration <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- ===================================================== -->
   <!-- FESTIVAL YEARS SECTION -->
   <!-- ===================================================== -->
 
-  <section class="years-section">
+  <section class="years-section home-reveal home-reveal-third">
 
     <div class="container">
 
@@ -255,7 +293,7 @@
 
   <section
     id="seva-section"
-    class="seva-section"
+    class="seva-section home-reveal home-reveal-fourth"
   >
 
     <div class="container">
@@ -358,111 +396,6 @@
 
   </section>
 
-
-
-  <!-- ===================================================== -->
-  <!-- ABOUT SECTION -->
-  <!-- ===================================================== -->
-
-  <section
-    id="about-section"
-    class="about-section"
-  >
-
-    <div class="container">
-
-
-      <h2 class="section-title">
-        About Team Shivaputra Youth Housing Board Colony
-      </h2>
-
-
-      <p class="about-text">
-
-        Team Shivaputra Youth Housing Board Colony, Guntur,
-        comes together every year to celebrate Ganesh Utsav
-        with devotion, unity and enthusiasm.
-
-        The community celebrates Vinayaka Chavithi, also known
-        as Ganesh Chaturthi, by organizing Ganesh Puja,
-        decorations, cultural programs, Annadanam and
-        Ganesh Nimajjanam activities.
-
-      </p>
-
-
-      <p class="about-text">
-
-        Vinayaka Chavithi is one of the most celebrated festivals
-        in India. It honors Lord Ganesha, the remover of obstacles
-        and the patron of arts and sciences.
-
-      </p>
-
-
-      <div class="about-actions">
-
-        <button
-          class="about-btn"
-          (click)="toggleCommitteeMembers()"
-        >
-
-          {{
-            showCommitteeMembers
-              ? 'Hide Committee Members'
-              : 'Show Committee Members'
-          }}
-
-        </button>
-
-      </div>
-
-
-
-      <!-- ================= COMMITTEE ================= -->
-
-      <div
-        id="committee-section"
-        class="committee-section"
-        *ngIf="showCommitteeMembers"
-      >
-
-
-        <h3 class="committee-title">
-
-          🏛️ Team ShivaPutra Committee Members
-          
-
-        </h3>
-
-
-        <div class="committee-grid">
-
-
-          <div
-            class="committee-member"
-            *ngFor="let member of committeeMembers"
-          >
-
-            <div class="member-card">
-
-              <h4>
-                {{ member.name }}
-              </h4>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
 
 
 </div>
