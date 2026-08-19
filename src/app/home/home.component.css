@@ -814,14 +814,22 @@
 
 
   .hero-title {
-    font-size: 2rem;
-
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    white-space: normal;
+    flex-wrap: wrap;
     gap: 0.4rem;
   }
 
 
   .hero-title-trishul {
     font-size: 1.7rem;
+  }
+
+  .hero-title span:last-child {
+    min-width: 0;
+    flex: 1 1 12rem;
   }
 
 
@@ -883,8 +891,8 @@
 
 
   .hero-title {
-    font-size: 1.65rem;
-
+    width: 100%;
+    font-size: clamp(1.25rem, 6.5vw, 1.65rem);
     line-height: 1.2;
   }
 
@@ -960,7 +968,7 @@
 @media (max-width: 360px) {
 
   .hero-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
 
