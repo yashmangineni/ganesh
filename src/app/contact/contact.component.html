@@ -1,0 +1,32 @@
+<section class="contact-page">
+  <header class="contact-heading">
+    <p class="eyebrow">We would love to hear from you</p>
+    <h1>Get in touch</h1>
+    <p>Submit your details to open the admin WhatsApp chat with your message ready to send.</p>
+  </header>
+
+  <div class="contact-layout">
+    <div class="contact-copy">
+      <h2>Let’s connect</h2>
+      <p>Whether you want to join the seva, ask about the celebration, or share a message with the team, we are here to help.</p>
+      <div class="contact-address">
+        <strong>Location</strong>
+        <span>Housing Board Colony<br />Guntur, Andhra Pradesh</span>
+      </div>
+      <a class="phone-link" href="tel:+919989101941">+91 9989101941</a>
+    </div>
+
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendToAdminWhatsApp()">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" [(ngModel)]="form.name" required placeholder="Enter your name" />
+
+      <label for="phone">Phone number</label>
+      <input id="phone" name="phone" type="tel" [(ngModel)]="form.phone" required placeholder="Enter your phone number" />
+
+      <label for="message">Your message</label>
+      <textarea id="message" name="message" [(ngModel)]="form.message" required rows="5" placeholder="How can we help?"></textarea>
+
+      <button type="submit" [disabled]="contactForm.invalid">Message Admin on WhatsApp <span aria-hidden="true">→</span></button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  color: #4a2116;
+}
+
+.about-hero {
+  padding: clamp(3.5rem, 9vw, 7rem) 1.5rem;
+  background: linear-gradient(135deg, #ff6b35 0%, #d32f2f 55%, #7b1fa2 100%);
+  color: white;
+  text-align: center;
+}
+
+.about-hero h1 {
+  margin: 0.5rem 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+}
+
+.about-hero p:last-child { margin: 0; font-size: 1.1rem; }
+.eyebrow { margin: 0; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.about-content .section-title { margin-top: 0; text-align: center; }
+.about-text { color: #5f514b; line-height: 1.8; }
+.about-actions { margin: 2rem 0; }
+.about-btn { border: 0; border-radius: 999px; padding: 0.8rem 1.3rem; background: #d32f2f; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+.about-btn:hover { background: #a92835; transform: translateY(-2px); }
+.committee-title { margin: 0 0 2rem; color: #b43a2d; font-family: Georgia, "Times New Roman", serif; text-align: center; }
+.committee-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; }
+.member-card { display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border-radius: 0.75rem; background: white; box-shadow: 0 8px 20px rgba(82, 42, 20, 0.1); }
+.member-number { display: grid; place-items: center; flex: 0 0 2rem; width: 2rem; height: 2rem; border-radius: 50%; background: #d32f2f; color: white; font-weight: 700; }
+.member-card h3 { margin: 0; font-size: 1rem; }
+
+@media (max-width: 700px) {
+  .about-hero {
+    padding: 3.25rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .about-hero p:last-child {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 3rem 1rem 4rem;
+  }
+
+  .about-content .section-title {
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+}
