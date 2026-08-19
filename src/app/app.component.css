@@ -20,12 +20,32 @@
 .nav-brand h1 {
   color: white;
   margin: 0;
-  font-size: 1.8rem;
+  min-width: 0;
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
   font-weight: 600;
   line-height: 1.2;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.nav-brand {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-logo {
+  flex: 0 0 auto;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 2px solid #f6c344;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #17100d;
 }
 
 .title-icon {
@@ -79,6 +99,7 @@
 
 .nav-links {
   display: flex;
+  flex-shrink: 0;
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -158,6 +179,104 @@
   padding: 1rem;
 }
 
+.welcome-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(40, 18, 10, 0.68);
+  animation: welcome-fade-in 0.25s ease-out;
+}
+
+.welcome-popup {
+  position: relative;
+  width: min(100%, 30rem);
+  padding: 2.5rem 2rem 2rem;
+  border: 2px solid #f6c344;
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, #fffaf0 0%, #fff0d2 100%);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  color: #4a2116;
+  text-align: center;
+  animation: welcome-rise-in 0.35s ease-out;
+}
+
+.welcome-popup-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #7c3321;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.welcome-popup-close:hover,
+.welcome-popup-close:focus-visible {
+  background: rgba(211, 47, 47, 0.12);
+}
+
+.welcome-popup-icon {
+  font-size: 2.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.welcome-popup-eyebrow {
+  margin: 0 0 0.5rem;
+  color: #c04a24;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.welcome-popup h2 {
+  margin: 0;
+  color: #b52f24;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 5vw, 2.25rem);
+}
+
+.welcome-popup-message {
+  max-width: 28rem;
+  margin: 1rem auto 1.5rem;
+  line-height: 1.65;
+}
+
+.welcome-popup-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff6b35, #d32f2f);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1rem rgba(211, 47, 47, 0.25);
+}
+
+.welcome-popup-button:hover,
+.welcome-popup-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+@keyframes welcome-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes welcome-rise-in {
+  from { opacity: 0; transform: translateY(1rem) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
@@ -176,7 +295,9 @@
   }
 
   .nav-brand h1 {
-    font-size: 1.4rem;
+    max-width: 100%;
+    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    overflow-wrap: anywhere;
     text-align: left;
     padding-right: 0.5rem;
   }
@@ -240,7 +361,12 @@
 
 @media (max-width: 480px) {
   .nav-brand h1 {
-    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .brand-logo {
+    width: 2.25rem;
+    height: 2.25rem;
   }
 
   .nav-links {
@@ -256,5 +382,27 @@
   .footer {
     padding: 1rem 0.75rem;
     font-size: 0.9rem;
+  }
+
+  .welcome-popup-backdrop {
+    padding: 0.75rem;
+  }
+
+  .welcome-popup {
+    padding: 2.25rem 1.25rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .welcome-popup-icon {
+    font-size: 2.35rem;
+  }
+
+  .welcome-popup-message {
+    margin: 0.8rem auto 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .welcome-popup-button {
+    width: 100%;
   }
 }
