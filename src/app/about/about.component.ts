@@ -35,8 +35,8 @@ export class AboutComponent implements OnInit {
   ];
 
   constructor(private meta: Meta) {
-    this.meta.updateTag({ name: 'title', content: 'About Team Shivaputra Youth | Guntur' });
-    this.meta.updateTag({ name: 'description', content: 'Learn about Team Shivaputra Youth Housing Board Colony and our Ganesh Utsav celebrations in Guntur.' });
+    this.meta.updateTag({ name: 'title', content: 'About Bala Ganesh Youth | Guntur' });
+    this.meta.updateTag({ name: 'description', content: 'Learn about Bala Ganesh Youth Housing Board Colony and our Ganesh Utsav celebrations in Guntur.' });
   }
 
   ngOnInit(): void {
