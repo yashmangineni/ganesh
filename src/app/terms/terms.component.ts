@@ -8,8 +8,8 @@ import { Meta } from '@angular/platform-browser';
 })
 export class TermsComponent implements OnInit {
   constructor(private meta: Meta) {
-    this.meta.updateTag({ name: 'title', content: 'Terms & Conditions | Team Shivaputra Youth' });
-    this.meta.updateTag({ name: 'description', content: 'Terms and Conditions for using the Team Shivaputra Youth website.' });
+    this.meta.updateTag({ name: 'title', content: 'Terms & Conditions | Bala Ganesh Youth' });
+    this.meta.updateTag({ name: 'description', content: 'Terms and Conditions for using the Bala Ganesh Youth website.' });
   }
 
   ngOnInit(): void {

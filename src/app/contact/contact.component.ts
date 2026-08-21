@@ -11,8 +11,8 @@ export class ContactComponent implements OnInit {
   readonly whatsappNumber = '919989101941'; // Replace with the actual WhatsApp number
 
   constructor(private meta: Meta) {
-    this.meta.updateTag({ name: 'title', content: 'Contact Team Shivaputra Youth | Guntur' });
-    this.meta.updateTag({ name: 'description', content: 'Get in touch with Team Shivaputra Youth in Housing Board Colony, Guntur.' });
+    this.meta.updateTag({ name: 'title', content: 'Contact Bala Ganesh Youth | Guntur' });
+    this.meta.updateTag({ name: 'description', content: 'Get in touch with Bala Ganesh Youth in Housing Board Colony, Guntur.' });
   }
 
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   sendToAdminWhatsApp(): void {
     const text = [
-      'Hello Team Shivaputra Youth,',
+      'Hello Bala Ganesh Youth,',
       '',
       `Name: ${this.form.name}`,
       `Phone: ${this.form.phone}`,

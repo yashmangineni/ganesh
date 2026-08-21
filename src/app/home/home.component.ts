@@ -16,23 +16,23 @@ export class HomeComponent implements OnInit {
   scannedResult: string | null = null;
 
   paymentUrl =
-    'upi://pay?pa=9989101941-2@axl&pn=TEAM SHIVAPUTRA YOUTH HOUSING BOARD &cu=INR';
+    'upi://pay?pa=9989101941-2@axl&pn=BALA GANESH YOUTH HOUSING BOARD &cu=INR';
 
-  heroImages = ['assets/shiva.png','assets/shiva.png' ];
+  heroImages = ['assets/balaganesh.png','assets/balaganesh.png' ];
   currentHeroImage = this.heroImages[0];
 
   constructor(private meta: Meta, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.meta.updateTag({ name: 'title', content: 'TEAM SHIVAPUTRA YOUTH HOUSING BOARD | Vinayaka Chavitihi Festival Housing Board Guntur' });
-    this.meta.updateTag({ name: 'description', content: 'TEAM SHIVAPUTRA YOUTH HOUSING BOARD at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Join our yearly celebrations, photo galleries, and festival updates.' });
-    this.meta.updateTag({ property: 'og:title', content: 'TEAM SHIVAPUTRA YOUTH HOUSING BOARD | Vinayaka Chavitihi Festival Housing Board Guntur' });
-    this.meta.updateTag({ property: 'og:description', content: 'TEAM SHIVAPUTRA YOUTH HOUSING BOARD at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Join our yearly celebrations, photo galleries, and festival updates.' });
+    this.meta.updateTag({ name: 'title', content: 'BALA GANESH YOUTH HOUSING BOARD | Vinayaka Chavitihi Festival Housing Board Guntur' });
+    this.meta.updateTag({ name: 'description', content: 'BALA GANESH YOUTH HOUSING BOARD at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Join our yearly celebrations, photo galleries, and festival updates.' });
+    this.meta.updateTag({ property: 'og:title', content: 'BALA GANESH YOUTH HOUSING BOARD | Vinayaka Chavitihi Festival Housing Board Guntur' });
+    this.meta.updateTag({ property: 'og:description', content: 'BALA GANESH YOUTH HOUSING BOARD at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Join our yearly celebrations, photo galleries, and festival updates.' });
     this.meta.updateTag({ property: 'og:url', content: 'http://balaganeshyouthguntur.duckdns.org/' });
-    this.meta.updateTag({ property: 'og:image', content: 'https://balaganeshyouthguntur.duckdns.org/assets/shiva.png' });
-    this.meta.updateTag({ property: 'twitter:title', content: 'TEAM SHIVAPUTRA YOUTH HOUSING BOARD | Vinayaka Chavitihi Festival Housing Board Guntur' });
-    this.meta.updateTag({ property: 'twitter:description', content: 'TEAM SHIVAPUTRA YOUTH HOUSING BOARD     at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Join our yearly celebrations, photo galleries, and festival updates.' });
-    this.meta.updateTag({ property: 'twitter:image', content: 'https://balaganeshyouthguntur.duckdns.org/assets/shiva.png' });
+    this.meta.updateTag({ property: 'og:image', content: 'https://balaganeshyouthguntur.duckdns.org/assets/balaganesh.png' });
+    this.meta.updateTag({ property: 'twitter:title', content: 'BALA GANESH YOUTH HOUSING BOARD | Vinayaka Chavitihi Festival Housing Board Guntur' });
+    this.meta.updateTag({ property: 'twitter:description', content: 'BALA GANESH YOUTH HOUSING BOARD at Housing Board Guntur (APHB Guntur) celebrates the auspicious Vinayaka Chavitihi (Ganesh Chaturthi) festival with devotion, joy, and community spirit. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Join our yearly celebrations, photo galleries, and festival updates.' });
+    this.meta.updateTag({ property: 'twitter:image', content: 'https://balaganeshyouthguntur.duckdns.org/assets/balaganesh.png' });
     // ensure home page starts at top when opened
     try { window.scrollTo(0,0); } catch (e) {}
 

@@ -8,8 +8,8 @@ import { Meta } from '@angular/platform-browser';
 })
 export class PrivacyPolicyComponent implements OnInit {
   constructor(private meta: Meta) {
-    this.meta.updateTag({ name: 'title', content: 'Privacy Policy | Team Shivaputra Youth' });
-    this.meta.updateTag({ name: 'description', content: 'Privacy Policy for Team Shivaputra Youth Housing Board Colony, Guntur.' });
+    this.meta.updateTag({ name: 'title', content: 'Privacy Policy | Bala Ganesh Youth' });
+    this.meta.updateTag({ name: 'description', content: 'Privacy Policy for Bala Ganesh Youth Housing Board Colony, Guntur.' });
   }
 
   ngOnInit(): void {

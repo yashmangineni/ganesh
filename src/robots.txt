@@ -3,5 +3,5 @@ Allow: /
 
 Sitemap: https://balaganeshyouthguntur.duckdns.org/sitemapadd.xml
 
-# Search coverage for Team Shivaputra Youth Housing Board Colony
+# Search coverage for Bala Ganesh Youth Housing Board Colony
 # Google can crawl and index the homepage for this keyword phrase.
