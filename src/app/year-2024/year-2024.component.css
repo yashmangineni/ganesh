@@ -1,144 +1,545 @@
+/* =========================================================
+   2023 YEAR PAGE
+   GREEN THEME
+   FULL IMAGE VISIBLE
+========================================================= */
+
 .year-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+
+  background:
+    linear-gradient(
+      135deg,
+      #E8F5E8 0%,
+      #C8E6C9 100%
+    );
 }
 
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 .header {
-  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+  background:
+    linear-gradient(
+      135deg,
+      #4CAF50 0%,
+      #2E7D32 100%
+    );
+
   color: white;
+
   padding: 3rem 2rem;
+
   text-align: center;
 }
 
 .header h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 1rem;
+  font-size:
+    clamp(
+      2rem,
+      5vw,
+      3rem
+    );
+
+  margin:
+    0 0 1rem;
+
   font-weight: 700;
+
   line-height: 1.2;
 }
 
 .header p {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size:
+    clamp(
+      1rem,
+      2.5vw,
+      1.3rem
+    );
+
   opacity: 0.9;
+
+  margin: 0;
 }
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
 .container {
   max-width: 1200px;
+
   margin: 0 auto;
-  padding: 2rem;
+
+  padding: 2.5rem 2rem;
 }
 
 .content-section {
   margin-bottom: 4rem;
 }
 
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
 .content-section h2 {
-  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  position: relative;
+
+  display: inline-block;
+
+  font-size:
+    clamp(
+      1.7rem,
+      4vw,
+      2.2rem
+    );
+
   color: #2E7D32;
-  margin-bottom: 2rem;
+
+  margin:
+    0 0 2rem;
+
   font-weight: 600;
+
   line-height: 1.2;
 }
 
+
+/* Green underline */
+
+.content-section h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -10px;
+
+  width: 60px;
+
+  height: 4px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4CAF50,
+      #2E7D32
+    );
+}
+
+
+/* =========================================================
+   PHOTO GALLERY
+========================================================= */
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: 2rem;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 28px;
+
+  width: 100%;
+
+  align-items: start;
 }
+
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
 
 .gallery-item {
   position: relative;
-  border-radius: 15px;
+
+  width: 100%;
+
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.12
+    );
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .gallery-item:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
 }
 
+
+/* =========================================================
+   IMAGE - COMPLETE IMAGE VISIBLE
+========================================================= */
+
 .gallery-item img {
+  display: block;
+
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.4s ease;
 }
+
+
+/* Very small hover zoom */
+
+.gallery-item:hover img {
+  transform:
+    scale(1.02);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
 
 .overlay {
   position: absolute;
-  bottom: 0;
+
   left: 0;
+
   right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+
+  bottom: 0;
+
+  padding:
+    75px 22px 22px;
+
   color: white;
-  padding: 2rem 1rem 1rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.60) 40%,
+      rgba(0, 0, 0, 0.10) 75%,
+      transparent 100%
+    );
+
+  opacity: 0;
+
+  transform:
+    translateY(12px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 .gallery-item:hover .overlay {
-  transform: translateY(0);
+  opacity: 1;
+
+  transform:
+    translateY(0);
 }
 
+
+/* =========================================================
+   OVERLAY TEXT
+========================================================= */
+
 .overlay h3 {
-  margin-bottom: 0.5rem;
+  margin:
+    0 0 8px;
+
+  color: white;
+
   font-size: 1.2rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
 }
+
+.overlay p {
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.92
+    );
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  font-size: 1.1rem;
+
+  color: #2E7D32;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
+
+  border-radius: 15px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #B71C1C;
+
+  background: #FFEBEE;
+
+  border:
+    1px solid #FFCDD2;
+
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   NO IMAGES
+========================================================= */
+
+.no-images {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  color: #607D64;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+}
+
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 2rem;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 28px;
 }
 
-.video-player {
-  aspect-ratio: 16 / 9;
-  background: #000;
-}
+
+/* =========================================================
+   VIDEO CARD
+========================================================= */
 
 .video-item {
-  background: white;
-  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.10
+    );
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .video-item:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(
+      0,
+      0,
+      0,
+      0.15
+    );
+}
+
+
+/* =========================================================
+   VIDEO PLAYER
+========================================================= */
+
+.video-player {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
 }
 
 .video-player video {
+  display: block;
+
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
 }
 
+
+/* =========================================================
+   VIDEO TEXT
+========================================================= */
+
 .video-item h3 {
-  padding: 1rem;
+  padding:
+    1rem 1rem 0.5rem;
+
   margin: 0;
+
   color: #2E7D32;
+
   font-weight: 600;
+
+  font-size: 1.15rem;
 }
 
 .video-item p {
-  padding: 0 1rem 1rem;
-  color: #666;
+  padding:
+    0 1rem 1rem;
+
   margin: 0;
+
+  color: #666;
+
+  line-height: 1.6;
 }
 
+
+/* =========================================================
+   MEMORY CARD
+========================================================= */
+
 .memory-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f1f8e9 100%
+    );
+
   border-radius: 18px;
+
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid #4CAF50;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+
+  border-left:
+    5px solid #4CAF50;
 }
 
 .memory-card p {
-  margin: 0 0 1rem;
+  margin:
+    0 0 1rem;
+
   color: #4d5b49;
+
   line-height: 1.8;
+
   font-size: 1.02rem;
 }
 
@@ -146,9 +547,49 @@
   margin-bottom: 0;
 }
 
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .container {
+    padding:
+      2rem 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 22px;
+  }
+
+  .video-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 22px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
+
   .header {
-    padding: 2.25rem 1rem;
+    padding:
+      2.25rem 1rem;
   }
 
   .header h1 {
@@ -156,47 +597,207 @@
   }
 
   .container {
-    padding: 1rem;
+    padding:
+      1.25rem;
   }
 
   .gallery-grid,
   .video-grid {
     grid-template-columns: 1fr;
+
+    gap: 20px;
   }
+
+
+  /* No forced image ratio */
+
+  .gallery-item {
+    aspect-ratio: auto;
+
+    border-radius: 16px;
+  }
+
+
+  /* Entire image */
 
   .gallery-item img {
-    height: 220px;
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
   }
+
+
+  /* Always show information on mobile */
 
   .overlay {
-    position: static;
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    opacity: 1;
+
     transform: none;
-    background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
-    padding: 1rem;
+
+    padding:
+      55px 15px 15px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(46, 125, 50, 0.94),
+        rgba(76, 175, 80, 0.55),
+        transparent
+      );
   }
 
+
   .gallery-item:hover .overlay {
+    opacity: 1;
+
     transform: none;
+  }
+
+
+  .gallery-item:hover img {
+    transform: none;
+  }
+
+
+  .gallery-item:hover {
+    transform:
+      translateY(-4px);
+  }
+
+
+  .overlay h3 {
+    font-size: 1.05rem;
+  }
+
+  .overlay p {
+    font-size: 0.88rem;
+  }
+
+
+  .content-section {
+    margin-bottom: 3rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 1.75rem;
   }
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 480px) {
+
+  .header {
+    padding:
+      2rem 0.85rem;
+  }
+
+  .header h1 {
+    font-size: 1.65rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
   .content-section {
     margin-bottom: 2.5rem;
   }
 
   .content-section h2 {
+    display: block;
+
     text-align: center;
-    margin-bottom: 1.25rem;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 1.5rem;
   }
 
-  .video-item h3,
-  .video-item p {
-    padding-left: 0.85rem;
-    padding-right: 0.85rem;
+  .content-section h2::after {
+    left: 50%;
+
+    transform:
+      translateX(-50%);
   }
+
+
+  /* Full image on small screens */
+
+  .gallery-grid {
+    gap: 18px;
+  }
+
+  .gallery-item {
+    aspect-ratio: auto;
+
+    border-radius: 14px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+  }
+
+
+  .overlay {
+    padding:
+      45px 14px 14px;
+  }
+
+  .overlay h3 {
+    font-size: 1rem;
+  }
+
+  .overlay p {
+    font-size: 0.82rem;
+  }
+
+
+  .video-item h3 {
+    padding:
+      0.9rem 0.85rem 0.4rem;
+  }
+
+  .video-item p {
+    padding:
+      0 0.85rem 0.85rem;
+  }
+
 
   .memory-card {
     padding: 1.25rem;
+  }
+
+  .memory-card p {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
   }
 }

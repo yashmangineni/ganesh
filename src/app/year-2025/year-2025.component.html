@@ -1,50 +1,256 @@
-<div class="year-container">
+  <!-- <div class="year-container">
+    <div class="header">
+      <h1>Om Gan Ganapataye Namaha ! 🕉️ Ganesh Utsav Celebrations 2025</h1>
+      <p>Pictures, Videos </p>
+    </div>
+
+    <div class="container">
+      <section class="content-section">
+        <h2>📸 Photo Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item" *ngFor="let photo of photos">
+            <img [src]="photo.src" [alt]="photo.alt" />
+            <div class="overlay">
+              <h3>{{ photo.title }}</h3>
+              <p>{{ photo.description }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>🎥 Video Collection</h2>
+        <div class="video-grid">
+          <div class="video-item" *ngFor="let video of videos">
+            <div class="video-player">
+              <video [src]="video.src" controls preload="metadata">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <h3>{{ video.title }}</h3>
+            <p>{{ video.description }}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section memory-section">
+        <h2>Golden Memories of 2025</h2>
+        <div class="memory-card">
+          <p>
+            The 2025 Ganesh Utsav celebrations gave us many joyful memories filled with devotion,
+            unity, music, and heartfelt participation from our community.
+          </p>
+          <p>
+            From every decoration and puja to every photo and video, each moment became a beautiful
+            reminder of togetherness, blessings, and the love we share for Lord Ganesha.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div> -->
+
+
+  <div class="year-container">
+
+  <!-- ====================================== -->
+  <!-- HEADER -->
+  <!-- ====================================== -->
+
   <div class="header">
-    <h1>Om Gan Ganapataye Namaha ! 🕉️ Ganesh Utsav Celebrations 2025</h1>
-    <p>Pictures, Videos </p>
+
+    <h1>
+      Om Gan Ganapataye Namaha ! 🕉️
+      Ganesh Utsav Celebrations 2025
+    </h1>
+
+    <p>
+      Pictures, Videos
+    </p>
+
   </div>
+
 
   <div class="container">
+
+
+    <!-- ====================================== -->
+    <!-- PHOTO GALLERY -->
+    <!-- ====================================== -->
+
     <section class="content-section">
-      <h2>📸 Photo Gallery</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item" *ngFor="let photo of photos">
-          <img [src]="photo.src" [alt]="photo.alt" />
+
+      <h2>
+        📸 Photo Gallery
+      </h2>
+
+
+      <!-- Loading -->
+
+      <div
+        class="loading"
+        *ngIf="loadingImages"
+      >
+        Loading 2025 images...
+      </div>
+
+
+      <!-- Error -->
+
+      <div
+        class="error-message"
+        *ngIf="imageError"
+      >
+        Unable to load 2025 images.
+      </div>
+
+
+      <!-- Gallery -->
+
+      <div
+        class="gallery-grid"
+        *ngIf="
+          !loadingImages &&
+          !imageError &&
+          photos.length > 0
+        "
+      >
+
+        <div
+          class="gallery-item"
+          *ngFor="let photo of photos"
+        >
+
+          <img
+            [src]="getImageUrl(photo)"
+            [alt]="photo.filename"
+            loading="lazy"
+          />
+
+
           <div class="overlay">
-            <h3>{{ photo.title }}</h3>
-            <p>{{ photo.description }}</p>
+
+            <h3>
+              {{ photo.filename }}
+            </h3>
+
+            <p>
+              Bala Ganesh Youth Community -
+              2025
+            </p>
+
           </div>
+
         </div>
+
       </div>
+
+
+      <!-- No images -->
+
+      <div
+        class="no-images"
+        *ngIf="
+          !loadingImages &&
+          !imageError &&
+          photos.length === 0
+        "
+      >
+        No photos available for 2025.
+      </div>
+
     </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- VIDEO COLLECTION -->
+    <!-- ====================================== -->
 
     <section class="content-section">
-      <h2>🎥 Video Collection</h2>
+
+      <h2>
+        🎥 Video Collection
+      </h2>
+
+
       <div class="video-grid">
-        <div class="video-item" *ngFor="let video of videos">
+
+
+        <div
+          class="video-item"
+          *ngFor="let video of videos"
+        >
+
           <div class="video-player">
-            <video [src]="video.src" controls preload="metadata">
-              Your browser does not support the video tag.
+
+            <video
+              [src]="video.src"
+              controls
+              preload="metadata"
+            >
+
+              Your browser does not
+              support the video tag.
+
             </video>
+
           </div>
-          <h3>{{ video.title }}</h3>
-          <p>{{ video.description }}</p>
+
+
+          <h3>
+            {{ video.title }}
+          </h3>
+
+
+          <p>
+            {{ video.description }}
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="content-section memory-section">
-      <h2>Golden Memories of 2025</h2>
+
+
+    <!-- ====================================== -->
+    <!-- MEMORY SECTION -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section memory-section"
+    >
+
+      <h2>
+        Golden Memories of 2025
+      </h2>
+
+
       <div class="memory-card">
+
         <p>
-          The 2025 Ganesh Utsav celebrations gave us many joyful memories filled with devotion,
-          unity, music, and heartfelt participation from our community.
+          The 2025 Ganesh Utsav celebrations
+          gave us many joyful memories filled
+          with devotion, unity, music, and
+          heartfelt participation from our
+          community.
         </p>
+
+
         <p>
-          From every decoration and puja to every photo and video, each moment became a beautiful
-          reminder of togetherness, blessings, and the love we share for Lord Ganesha.
+          From every decoration and puja to
+          every photo and video, each moment
+          became a beautiful reminder of
+          togetherness, blessings, and the
+          love we share for Lord Ganesha.
         </p>
+
       </div>
+
     </section>
+
+
   </div>
+
 </div>

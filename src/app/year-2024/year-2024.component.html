@@ -1,4 +1,4 @@
-<div class="year-container">
+<!-- <div class="year-container">
   <div class="header">
     <h1>Mangal Murti Morya! 🕉️ Ganesh Utsav Celebrations 2024</h1>
     <p>Pictures, Videos</p>
@@ -47,4 +47,220 @@
       </div>
     </section>
   </div>
+</div> -->
+
+
+<div class="year-container">
+
+  <!-- ====================================== -->
+  <!-- HEADER -->
+  <!-- ====================================== -->
+
+  <div class="header">
+
+    <h1>
+      Mangal Murti Morya! 🕉️
+      Ganesh Utsav Celebrations 2024
+    </h1>
+
+    <p>
+      Pictures, Videos
+    </p>
+
+  </div>
+
+
+  <div class="container">
+
+
+    <!-- ====================================== -->
+    <!-- PHOTO GALLERY -->
+    <!-- ====================================== -->
+
+    <section class="content-section">
+
+      <h2>
+        📸 Photo Gallery
+      </h2>
+
+
+      <!-- Loading -->
+
+      <div
+        class="loading"
+        *ngIf="loadingImages"
+      >
+
+        Loading 2024 images...
+
+      </div>
+
+
+      <!-- Error -->
+
+      <div
+        class="error-message"
+        *ngIf="imageError"
+      >
+
+        Unable to load 2024 images.
+
+      </div>
+
+
+      <!-- Gallery -->
+
+      <div
+        class="gallery-grid"
+        *ngIf="
+          !loadingImages &&
+          !imageError &&
+          photos.length > 0
+        "
+      >
+
+        <div
+          class="gallery-item"
+          *ngFor="
+            let photo of photos
+          "
+        >
+
+          <img
+            [src]="getImageUrl(photo)"
+            [alt]="photo.filename"
+            loading="lazy"
+          />
+
+
+          <div class="overlay">
+
+            <h3>
+              {{ photo.filename }}
+            </h3>
+
+            <p>
+              Bala Ganesh Youth Community -
+              2024
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- No images -->
+
+      <div
+        class="no-images"
+        *ngIf="
+          !loadingImages &&
+          !imageError &&
+          photos.length === 0
+        "
+      >
+
+        No photos available for 2024.
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- VIDEO COLLECTION -->
+    <!-- ====================================== -->
+
+    <section class="content-section">
+
+      <h2>
+        🎥 Video Collection
+      </h2>
+
+
+      <div class="video-grid">
+
+
+        <div
+          class="video-item"
+          *ngFor="
+            let video of videos
+          "
+        >
+
+          <div class="video-player">
+
+            <video
+              [src]="video.src"
+              controls
+              preload="metadata"
+            >
+
+              Your browser does not
+              support the video tag.
+
+            </video>
+
+          </div>
+
+
+          <h3>
+            {{ video.title }}
+          </h3>
+
+
+          <p>
+            {{ video.description }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- MEMORY SECTION -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section memory-section"
+    >
+
+      <h2>
+        Beautiful Memories of 2024
+      </h2>
+
+
+      <div class="memory-card">
+
+        <p>
+          The 2024 festival brought our
+          community even closer through
+          colorful celebrations, shared seva,
+          and joyful moments spent together
+          in devotion to Lord Ganesha.
+        </p>
+
+
+        <p>
+          Every smile, every gathering, and
+          every captured moment in this gallery
+          reflects the spirit of faith,
+          friendship, and unforgettable
+          celebration.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </div>
+
 </div>
