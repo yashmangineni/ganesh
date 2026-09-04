@@ -84,7 +84,7 @@
       </h2>
 
 
-      <!-- Loading -->
+      <!-- LOADING -->
 
       <div
         class="loading"
@@ -94,7 +94,7 @@
       </div>
 
 
-      <!-- Error -->
+      <!-- ERROR -->
 
       <div
         class="error-message"
@@ -104,7 +104,9 @@
       </div>
 
 
-      <!-- Gallery -->
+      <!-- =========================================
+           PHOTO GALLERY
+      ========================================== -->
 
       <div
         class="gallery-grid"
@@ -118,34 +120,22 @@
         <div
           class="gallery-item"
           *ngFor="let photo of photos"
+          (click)="openImage(photo)"
         >
 
           <img
             [src]="getImageUrl(photo)"
-            [alt]="photo.filename"
+            [alt]="getImageAlt(photo)"
             loading="lazy"
+            decoding="async"
           />
-
-
-          <div class="overlay">
-
-            <h3>
-              {{ photo.filename }}
-            </h3>
-
-            <p>
-              Bala Ganesh Youth Community -
-              2025
-            </p>
-
-          </div>
 
         </div>
 
       </div>
 
 
-      <!-- No images -->
+      <!-- NO IMAGES -->
 
       <div
         class="no-images"
@@ -252,5 +242,40 @@
 
 
   </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FULLSCREEN IMAGE VIEWER
+====================================================== -->
+
+<div
+  class="image-modal"
+  *ngIf="selectedImage"
+  (click)="closeImage()"
+>
+
+  <!-- CLOSE BUTTON -->
+
+  <button
+    type="button"
+    class="close-button"
+    aria-label="Close image"
+    (click)="closeImage(); $event.stopPropagation()"
+  >
+    ×
+  </button>
+
+
+  <!-- FULL ORIGINAL IMAGE -->
+
+  <img
+    class="full-image"
+    [src]="getImageUrl(selectedImage)"
+    [alt]="getImageAlt(selectedImage)"
+    (click)="$event.stopPropagation()"
+  />
 
 </div>

@@ -241,28 +241,62 @@ interface ImageRecord {
 })
 export class Year2023Component implements OnInit {
 
+  // =====================================================
+  // PHOTO DATA
+  // =====================================================
+
   photos: ImageRecord[] = [];
 
   loadingImages = true;
+
   imageError = false;
+
+
+  // =====================================================
+  // SELECTED IMAGE
+  // =====================================================
+
+  selectedImage: ImageRecord | null = null;
+
+
+  // =====================================================
+  // API
+  // =====================================================
 
   private apiUrl =
     'https://ganesh-be.onrender.com/api/images';
+
+
+  // =====================================================
+  // VIDEOS
+  // =====================================================
 
   videos = [
     {
       src: 'assets/23.mp4',
       title: 'Ganesha Sthapana 2023',
-      description: 'The installation ceremony of Lord Ganesha'
+      description:
+        'The installation ceremony of Lord Ganesha'
     },
     {
       src: 'assets/2222.mp4',
       title: 'Ganesha Sthapana 2023',
-      description: 'The installation ceremony of Lord Ganesha'
+      description:
+        'The installation ceremony of Lord Ganesha'
     }
   ];
 
+
+  // =====================================================
+  // TEAM
+  // =====================================================
+
   teamMembers: any[] = [];
+
+
+  // =====================================================
+  // CONSTRUCTOR
+  // =====================================================
 
   constructor(
     private meta: Meta,
@@ -270,20 +304,25 @@ export class Year2023Component implements OnInit {
     private http: HttpClient
   ) {}
 
+
+  // =====================================================
+  // ON INIT
+  // =====================================================
+
   ngOnInit(): void {
 
-    // =====================================================
+    // ===================================================
     // SEO TITLE
-    // =====================================================
+    // ===================================================
 
     this.title.setTitle(
       'Bala Ganesh Youth Community 2023 | Ganesh Utsav Photos & Videos | Guntur'
     );
 
 
-    // =====================================================
-    // SEO DESCRIPTION
-    // =====================================================
+    // ===================================================
+    // META DESCRIPTION
+    // ===================================================
 
     this.meta.updateTag({
       name: 'description',
@@ -292,9 +331,9 @@ export class Year2023Component implements OnInit {
     });
 
 
-    // =====================================================
-    // OPEN GRAPH
-    // =====================================================
+    // ===================================================
+    // OPEN GRAPH TITLE
+    // ===================================================
 
     this.meta.updateTag({
       property: 'og:title',
@@ -302,11 +341,21 @@ export class Year2023Component implements OnInit {
         'Bala Ganesh Youth Community 2023 | Ganesh Utsav Photos & Videos'
     });
 
+
+    // ===================================================
+    // OPEN GRAPH DESCRIPTION
+    // ===================================================
+
     this.meta.updateTag({
       property: 'og:description',
       content:
         'Explore Bala Ganesh Youth Community Ganesh Utsav 2023 photos, videos and festival memories from Housing Board Colony, Guntur.'
     });
+
+
+    // ===================================================
+    // OPEN GRAPH URL
+    // ===================================================
 
     this.meta.updateTag({
       property: 'og:url',
@@ -314,10 +363,20 @@ export class Year2023Component implements OnInit {
         'https://balaganeshyouthguntur.duckdns.org/2023'
     });
 
+
+    // ===================================================
+    // OPEN GRAPH TYPE
+    // ===================================================
+
     this.meta.updateTag({
       property: 'og:type',
       content: 'website'
     });
+
+
+    // ===================================================
+    // OPEN GRAPH IMAGE
+    // ===================================================
 
     this.meta.updateTag({
       property: 'og:image',
@@ -326,14 +385,19 @@ export class Year2023Component implements OnInit {
     });
 
 
-    // =====================================================
-    // TWITTER
-    // =====================================================
+    // ===================================================
+    // TWITTER CARD
+    // ===================================================
 
     this.meta.updateTag({
       name: 'twitter:card',
       content: 'summary_large_image'
     });
+
+
+    // ===================================================
+    // TWITTER TITLE
+    // ===================================================
 
     this.meta.updateTag({
       name: 'twitter:title',
@@ -341,11 +405,21 @@ export class Year2023Component implements OnInit {
         'Bala Ganesh Youth Community 2023 | Ganesh Utsav Photos & Videos'
     });
 
+
+    // ===================================================
+    // TWITTER DESCRIPTION
+    // ===================================================
+
     this.meta.updateTag({
       name: 'twitter:description',
       content:
         'Explore Bala Ganesh Youth Community Ganesh Utsav 2023 photos, videos and festival memories from Guntur.'
     });
+
+
+    // ===================================================
+    // TWITTER IMAGE
+    // ===================================================
 
     this.meta.updateTag({
       name: 'twitter:image',
@@ -354,48 +428,54 @@ export class Year2023Component implements OnInit {
     });
 
 
-    // =====================================================
+    // ===================================================
     // CANONICAL URL
-    // =====================================================
+    // ===================================================
 
     this.setCanonicalUrl(
       'https://balaganeshyouthguntur.duckdns.org/2023'
     );
 
 
-    // =====================================================
+    // ===================================================
     // LOAD IMAGES
-    // =====================================================
+    // ===================================================
 
     this.loadImages();
 
 
-    // =====================================================
+    // ===================================================
     // START PAGE FROM TOP
-    // =====================================================
+    // ===================================================
 
     try {
       window.scrollTo(0, 0);
-    } catch (e) {}
+    } catch (e) {
+      // Ignore
+    }
   }
 
 
-  // =======================================================
-  // LOAD 2023 IMAGES FROM LIVE API
-  // =======================================================
+  // =====================================================
+  // LOAD 2023 IMAGES
+  // =====================================================
 
   loadImages(): void {
 
     this.loadingImages = true;
+
     this.imageError = false;
+
 
     const url =
       `${this.apiUrl}?year=2023`;
 
+
     console.log(
-      'Calling 2023 image API:',
+      'Calling 2023 API:',
       url
     );
+
 
     this.http
       .get<ImageRecord[]>(url)
@@ -408,10 +488,14 @@ export class Year2023Component implements OnInit {
             response
           );
 
+
+          // Keep exact API order
           this.photos = response;
+
 
           this.loadingImages = false;
         },
+
 
         error: (error) => {
 
@@ -420,15 +504,18 @@ export class Year2023Component implements OnInit {
             error
           );
 
+
           console.error(
             'Status:',
             error.status
           );
 
+
           console.error(
             'Error body:',
             error.error
           );
+
 
           this.loadingImages = false;
 
@@ -439,9 +526,9 @@ export class Year2023Component implements OnInit {
   }
 
 
-  // =======================================================
+  // =====================================================
   // ACTUAL IMAGE FILE URL
-  // =======================================================
+  // =====================================================
 
   getImageUrl(
     photo: ImageRecord
@@ -451,9 +538,9 @@ export class Year2023Component implements OnInit {
   }
 
 
-  // =======================================================
-  // SEO FRIENDLY ALT TEXT
-  // =======================================================
+  // =====================================================
+  // IMAGE ALT TEXT
+  // =====================================================
 
   getImageAlt(
     photo: ImageRecord
@@ -468,9 +555,37 @@ export class Year2023Component implements OnInit {
   }
 
 
-  // =======================================================
+  // =====================================================
+  // OPEN FULLSCREEN IMAGE
+  // =====================================================
+
+  openImage(
+    photo: ImageRecord
+  ): void {
+
+    this.selectedImage = photo;
+
+    // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
+  }
+
+
+  // =====================================================
+  // CLOSE FULLSCREEN IMAGE
+  // =====================================================
+
+  closeImage(): void {
+
+    this.selectedImage = null;
+
+    // Restore scrolling
+    document.body.style.overflow = '';
+  }
+
+
+  // =====================================================
   // CANONICAL URL
-  // =======================================================
+  // =====================================================
 
   private setCanonicalUrl(
     url: string
@@ -489,10 +604,12 @@ export class Year2023Component implements OnInit {
           'link'
         );
 
+
       canonical.setAttribute(
         'rel',
         'canonical'
       );
+
 
       document.head.appendChild(
         canonical

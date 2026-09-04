@@ -69,7 +69,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 
 interface ImageRecord {
@@ -88,47 +88,99 @@ interface ImageRecord {
 })
 export class Year2024Component implements OnInit {
 
+  // =====================================================
+  // PHOTO DATA
+  // =====================================================
+
   photos: ImageRecord[] = [];
 
   loadingImages = true;
+
   imageError = false;
+
+
+  // =====================================================
+  // SELECTED IMAGE
+  // =====================================================
+
+  selectedImage: ImageRecord | null = null;
+
+
+  // =====================================================
+  // API
+  // =====================================================
 
   private apiUrl =
     'https://ganesh-be.onrender.com/api/images';
+
+
+  // =====================================================
+  // VIDEOS
+  // =====================================================
 
   videos = [
     {
       src: 'assets/video24.mp4',
       title: 'Ganesha Arrival 2024',
-      description: 'The grand arrival of Lord Ganesha'
+      description:
+        'The grand arrival of Lord Ganesha'
     },
     {
       src: 'assets/v24.mp4',
       title: 'Ganesha Arrival 2024',
-      description: 'The grand arrival of Lord Ganesha'
+      description:
+        'The grand arrival of Lord Ganesha'
     }
   ];
 
+
+  // =====================================================
+  // TEAM
+  // =====================================================
+
   teamMembers: any[] = [];
+
+
+  // =====================================================
+  // CONSTRUCTOR
+  // =====================================================
 
   constructor(
     private meta: Meta,
+    private title: Title,
     private http: HttpClient
   ) {}
 
+
+  // =====================================================
+  // ON INIT
+  // =====================================================
+
   ngOnInit(): void {
 
-    this.meta.updateTag({
-      name: 'title',
-      content:
-        'Bala Ganesh Youth Community 2024 | Photos & Videos Gallery Housing Board Guntur'
-    });
+    // ===================================================
+    // SEO TITLE
+    // ===================================================
+
+    this.title.setTitle(
+      'Bala Ganesh Youth Community 2024 | Photos & Videos Gallery Housing Board Guntur'
+    );
+
+
+    // ===================================================
+    // META DESCRIPTION
+    // ===================================================
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2024 Vinayaka Chavitihi Festival. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Relive the memorable moments through our photo gallery, video collection, and event highlights from the grand celebration.'
+        'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2024 Vinayaka Chavithi Festival. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Relive the memorable moments through our photo gallery, video collection, and event highlights from the grand celebration.'
     });
+
+
+    // ===================================================
+    // OPEN GRAPH TITLE
+    // ===================================================
 
     this.meta.updateTag({
       property: 'og:title',
@@ -136,17 +188,32 @@ export class Year2024Component implements OnInit {
         'Bala Ganesh Youth Community 2024 | Photos & Videos Gallery Housing Board Guntur'
     });
 
+
+    // ===================================================
+    // OPEN GRAPH DESCRIPTION
+    // ===================================================
+
     this.meta.updateTag({
       property: 'og:description',
       content:
-        'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2024 Vinayaka Chavitihi Festival. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Relive the memorable moments through our photo gallery, video collection, and event highlights from the grand celebration.'
+        'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2024 Vinayaka Chavithi Festival. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Relive the memorable moments through our photo gallery, video collection, and event highlights from the grand celebration.'
     });
+
+
+    // ===================================================
+    // OPEN GRAPH URL
+    // ===================================================
 
     this.meta.updateTag({
       property: 'og:url',
       content:
-        'http://balaganeshyouthguntur.duckdns.org/2024'
+        'https://balaganeshyouthguntur.duckdns.org/2024'
     });
+
+
+    // ===================================================
+    // OPEN GRAPH IMAGE
+    // ===================================================
 
     this.meta.updateTag({
       property: 'og:image',
@@ -154,44 +221,98 @@ export class Year2024Component implements OnInit {
         'https://ganesh-rho.vercel.app/assets/2024.jpg'
     });
 
+
+    // ===================================================
+    // TWITTER TITLE
+    // ===================================================
+
     this.meta.updateTag({
-      property: 'twitter:title',
+      name: 'twitter:title',
       content:
         'Bala Ganesh Youth Community 2024 | Photos & Videos Gallery Housing Board Guntur'
     });
 
-    this.meta.updateTag({
-      property: 'twitter:description',
-      content:
-        'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2024 Vinayaka Chavitihi Festival. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Relive the memorable moments through our photo gallery, video collection, and event highlights from the grand celebration.'
-    });
+
+    // ===================================================
+    // TWITTER DESCRIPTION
+    // ===================================================
 
     this.meta.updateTag({
-      property: 'twitter:image',
+      name: 'twitter:description',
+      content:
+        'Bala Ganesh Youth Community at Housing Board Guntur (APHB Guntur) 2024 Vinayaka Chavithi Festival. Located in Housing Board Colony near Masjid Guntur and near Sai Baba Temple. Relive the memorable moments through our photo gallery, video collection, and event highlights from the grand celebration.'
+    });
+
+
+    // ===================================================
+    // TWITTER IMAGE
+    // ===================================================
+
+    this.meta.updateTag({
+      name: 'twitter:image',
       content:
         'https://ganesh-rho.vercel.app/assets/2024.jpg'
     });
 
+
+    // ===================================================
+    // TWITTER CARD
+    // ===================================================
+
+    this.meta.updateTag({
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    });
+
+
+    // ===================================================
+    // CANONICAL URL
+    // =====================================================
+
+    this.setCanonicalUrl(
+      'https://balaganeshyouthguntur.duckdns.org/2024'
+    );
+
+
+    // ===================================================
+    // LOAD IMAGES
+    // ===================================================
+
     this.loadImages();
+
+
+    // ===================================================
+    // START PAGE FROM TOP
+    // ===================================================
 
     try {
       window.scrollTo(0, 0);
-    } catch (e) {}
+    } catch (e) {
+      // Ignore
+    }
   }
 
-  // ==========================================
+
+  // =====================================================
   // LOAD 2024 IMAGES FROM API
-  // ==========================================
+  // =====================================================
 
   loadImages(): void {
 
     this.loadingImages = true;
+
     this.imageError = false;
+
 
     const url =
       `${this.apiUrl}?year=2024`;
 
-    console.log('Calling 2024 API:', url);
+
+    console.log(
+      'Calling 2024 API:',
+      url
+    );
+
 
     this.http
       .get<ImageRecord[]>(url)
@@ -204,10 +325,14 @@ export class Year2024Component implements OnInit {
             images
           );
 
+
+          // Keep API response order
           this.photos = images;
+
 
           this.loadingImages = false;
         },
+
 
         error: (error) => {
 
@@ -216,26 +341,31 @@ export class Year2024Component implements OnInit {
             error
           );
 
+
           console.error(
             'Status:',
             error.status
           );
+
 
           console.error(
             'Error body:',
             error.error
           );
 
+
           this.loadingImages = false;
+
           this.imageError = true;
         }
 
       });
   }
 
-  // ==========================================
-  // ACTUAL IMAGE URL
-  // ==========================================
+
+  // =====================================================
+  // ACTUAL IMAGE FILE URL
+  // =====================================================
 
   getImageUrl(
     photo: ImageRecord
@@ -243,4 +373,91 @@ export class Year2024Component implements OnInit {
 
     return `${this.apiUrl}/${photo._id}/file`;
   }
+
+
+  // =====================================================
+  // IMAGE ALT TEXT
+  // =====================================================
+
+  getImageAlt(
+    photo: ImageRecord
+  ): string {
+
+    return (
+      'Bala Ganesh Youth Community ' +
+      'Ganesh Utsav 2024 - ' +
+      photo.filename +
+      ' - Guntur'
+    );
+  }
+
+
+  // =====================================================
+  // OPEN FULLSCREEN IMAGE
+  // =====================================================
+
+  openImage(
+    photo: ImageRecord
+  ): void {
+
+    this.selectedImage = photo;
+
+    // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
+  }
+
+
+  // =====================================================
+  // CLOSE FULLSCREEN IMAGE
+  // =====================================================
+
+  closeImage(): void {
+
+    this.selectedImage = null;
+
+    // Restore background scrolling
+    document.body.style.overflow = '';
+  }
+
+
+  // =====================================================
+  // CANONICAL URL
+  // =====================================================
+
+  private setCanonicalUrl(
+    url: string
+  ): void {
+
+    let canonical =
+      document.querySelector(
+        'link[rel="canonical"]'
+      ) as HTMLLinkElement | null;
+
+
+    if (!canonical) {
+
+      canonical =
+        document.createElement(
+          'link'
+        );
+
+
+      canonical.setAttribute(
+        'rel',
+        'canonical'
+      );
+
+
+      document.head.appendChild(
+        canonical
+      );
+    }
+
+
+    canonical.setAttribute(
+      'href',
+      url
+    );
+  }
+
 }
