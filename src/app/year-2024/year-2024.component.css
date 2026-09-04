@@ -1,7 +1,6 @@
 /* =========================================================
-   2023 YEAR PAGE
-   GREEN THEME
-   FULL IMAGE VISIBLE
+   2024 YEAR PAGE
+   ORANGE / RED THEME
 ========================================================= */
 
 .year-container {
@@ -10,8 +9,8 @@
   background:
     linear-gradient(
       135deg,
-      #E8F5E8 0%,
-      #C8E6C9 100%
+      #FFF3E0 0%,
+      #FFE0B2 100%
     );
 }
 
@@ -24,8 +23,8 @@
   background:
     linear-gradient(
       135deg,
-      #4CAF50 0%,
-      #2E7D32 100%
+      #FF6B35 0%,
+      #D32F2F 100%
     );
 
   color: white;
@@ -34,6 +33,7 @@
 
   text-align: center;
 }
+
 
 .header h1 {
   font-size:
@@ -51,6 +51,7 @@
   line-height: 1.2;
 }
 
+
 .header p {
   font-size:
     clamp(
@@ -66,7 +67,7 @@
 
 
 /* =========================================================
-   MAIN CONTAINER
+   CONTAINER
 ========================================================= */
 
 .container {
@@ -77,13 +78,14 @@
   padding: 2.5rem 2rem;
 }
 
+
 .content-section {
   margin-bottom: 4rem;
 }
 
 
 /* =========================================================
-   SECTION HEADINGS
+   SECTION TITLE
 ========================================================= */
 
 .content-section h2 {
@@ -98,7 +100,7 @@
       2.2rem
     );
 
-  color: #2E7D32;
+  color: #D32F2F;
 
   margin:
     0 0 2rem;
@@ -109,8 +111,6 @@
 }
 
 
-/* Green underline */
-
 .content-section h2::after {
   content: "";
 
@@ -120,7 +120,7 @@
 
   bottom: -10px;
 
-  width: 60px;
+  width: 65px;
 
   height: 4px;
 
@@ -129,8 +129,8 @@
   background:
     linear-gradient(
       90deg,
-      #4CAF50,
-      #2E7D32
+      #FF6B35,
+      #D32F2F
     );
 }
 
@@ -152,18 +152,21 @@
 
   width: 100%;
 
-  align-items: start;
+  align-items: stretch;
 }
 
 
 /* =========================================================
-   GALLERY CARD
+   GALLERY ITEM
+   ALL THUMBNAILS SAME SIZE
 ========================================================= */
 
 .gallery-item {
   position: relative;
 
   width: 100%;
+
+  aspect-ratio: 4 / 3;
 
   overflow: hidden;
 
@@ -187,12 +190,13 @@
     box-shadow 0.35s ease;
 }
 
+
 .gallery-item:hover {
   transform:
     translateY(-7px);
 
   box-shadow:
-    0 18px 40px
+    0 18px 42px
     rgba(
       0,
       0,
@@ -203,37 +207,61 @@
 
 
 /* =========================================================
-   IMAGE - COMPLETE IMAGE VISIBLE
+   IMAGE WRAPPER
 ========================================================= */
 
-.gallery-item img {
-  display: block;
-
+.image-wrapper {
   width: 100%;
 
-  height: auto;
+  height: 100%;
 
-  max-width: 100%;
+  display: flex;
 
-  object-fit: contain;
+  align-items: center;
+
+  justify-content: center;
 
   background: #ffffff;
 
-  transition:
-    transform 0.4s ease;
-}
-
-
-/* Very small hover zoom */
-
-.gallery-item:hover img {
-  transform:
-    scale(1.02);
+  overflow: hidden;
 }
 
 
 /* =========================================================
-   IMAGE OVERLAY
+   GALLERY IMAGE
+   COMPLETE IMAGE - NO CROPPING
+========================================================= */
+
+.image-wrapper img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.45s ease;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.gallery-item:hover .image-wrapper img {
+  transform:
+    scale(1.04);
+}
+
+
+/* =========================================================
+   OVERLAY
 ========================================================= */
 
 .overlay {
@@ -269,6 +297,7 @@
     transform 0.35s ease;
 }
 
+
 .gallery-item:hover .overlay {
   opacity: 1;
 
@@ -285,7 +314,7 @@
   margin:
     0 0 8px;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 1.2rem;
 
@@ -293,6 +322,7 @@
 
   line-height: 1.3;
 }
+
 
 .overlay p {
   margin: 0;
@@ -326,17 +356,40 @@
 
   font-size: 1.1rem;
 
-  color: #2E7D32;
+  color: #D32F2F;
 
   background:
     rgba(
       255,
       255,
       255,
-      0.65
+      0.7
     );
 
   border-radius: 15px;
+
+  animation:
+    loadingPulse
+    1.5s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes loadingPulse {
+
+  0% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.55;
+  }
+
 }
 
 
@@ -350,6 +403,8 @@
   box-sizing: border-box;
 
   padding: 20px;
+
+  margin-top: 10px;
 
   text-align: center;
 
@@ -377,7 +432,7 @@
 
   text-align: center;
 
-  color: #607D64;
+  color: #777;
 
   background: #ffffff;
 
@@ -395,7 +450,7 @@
 
 
 /* =========================================================
-   VIDEO SECTION
+   VIDEO GRID
 ========================================================= */
 
 .video-grid {
@@ -416,11 +471,11 @@
 ========================================================= */
 
 .video-item {
-  overflow: hidden;
-
-  background: white;
+  background: #ffffff;
 
   border-radius: 18px;
+
+  overflow: hidden;
 
   box-shadow:
     0 10px 30px
@@ -436,6 +491,7 @@
     box-shadow 0.35s ease;
 }
 
+
 .video-item:hover {
   transform:
     translateY(-6px);
@@ -446,7 +502,7 @@
       0,
       0,
       0,
-      0.15
+      0.16
     );
 }
 
@@ -462,6 +518,7 @@
 
   background: #000;
 }
+
 
 .video-player video {
   display: block;
@@ -484,12 +541,13 @@
 
   margin: 0;
 
-  color: #2E7D32;
+  color: #D32F2F;
 
   font-weight: 600;
 
   font-size: 1.15rem;
 }
+
 
 .video-item p {
   padding:
@@ -512,7 +570,7 @@
     linear-gradient(
       135deg,
       #ffffff 0%,
-      #f1f8e9 100%
+      #FFF3E0 100%
     );
 
   border-radius: 18px;
@@ -529,22 +587,200 @@
     );
 
   border-left:
-    5px solid #4CAF50;
+    5px solid #FF6B35;
 }
+
 
 .memory-card p {
   margin:
     0 0 1rem;
 
-  color: #4d5b49;
+  color: #6b5241;
 
   line-height: 1.8;
 
   font-size: 1.02rem;
 }
 
+
 .memory-card p:last-child {
   margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FULLSCREEN IMAGE MODAL
+========================================================= */
+
+.image-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.94
+    );
+
+  cursor: zoom-out;
+
+  animation:
+    modalFadeIn
+    0.25s
+    ease;
+}
+
+
+/* =========================================================
+   FULL ORIGINAL PHOTO
+========================================================= */
+
+.full-image {
+  display: block;
+
+  max-width: 95vw;
+
+  max-height: 92vh;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(
+      0,
+      0,
+      0,
+      0.55
+    );
+
+  cursor: default;
+
+  animation:
+    imageZoomIn
+    0.3s
+    ease;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-button {
+  position: absolute;
+
+  top: 20px;
+
+  right: 25px;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.95
+    );
+
+  color: #D32F2F;
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 100000;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.close-button:hover {
+  transform:
+    rotate(90deg)
+    scale(1.1);
+
+  background: #D32F2F;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MODAL ANIMATIONS
+========================================================= */
+
+@keyframes modalFadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes imageZoomIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.82);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+
 }
 
 
@@ -559,6 +795,7 @@
       2rem 1.5rem;
   }
 
+
   .gallery-grid {
     grid-template-columns:
       repeat(
@@ -569,6 +806,7 @@
     gap: 22px;
   }
 
+
   .video-grid {
     grid-template-columns:
       repeat(
@@ -578,6 +816,7 @@
 
     gap: 22px;
   }
+
 }
 
 
@@ -592,14 +831,17 @@
       2.25rem 1rem;
   }
 
+
   .header h1 {
     font-size: 2rem;
   }
+
 
   .container {
     padding:
       1.25rem;
   }
+
 
   .gallery-grid,
   .video-grid {
@@ -609,41 +851,35 @@
   }
 
 
-  /* No forced image ratio */
+  /* SAME SIZE PHOTO BOX */
 
   .gallery-item {
-    aspect-ratio: auto;
+    aspect-ratio:
+      4 / 3;
 
     border-radius: 16px;
   }
 
 
-  /* Entire image */
-
-  .gallery-item img {
-    display: block;
-
+  .image-wrapper {
     width: 100%;
 
-    height: auto;
+    height: 100%;
+  }
 
-    max-width: 100%;
+
+  .image-wrapper img {
+    width: 100%;
+
+    height: 100%;
 
     object-fit: contain;
   }
 
 
-  /* Always show information on mobile */
+  /* MOBILE OVERLAY */
 
   .overlay {
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
     opacity: 1;
 
     transform: none;
@@ -654,8 +890,18 @@
     background:
       linear-gradient(
         to top,
-        rgba(46, 125, 50, 0.94),
-        rgba(76, 175, 80, 0.55),
+        rgba(
+          211,
+          47,
+          47,
+          0.94
+        ),
+        rgba(
+          255,
+          107,
+          53,
+          0.55
+        ),
         transparent
       );
   }
@@ -683,6 +929,7 @@
     font-size: 1.05rem;
   }
 
+
   .overlay p {
     font-size: 0.88rem;
   }
@@ -692,11 +939,44 @@
     margin-bottom: 3rem;
   }
 
+
   .content-section h2 {
     font-size: 1.8rem;
 
     margin-bottom: 1.75rem;
   }
+
+
+  /* =====================================================
+     MOBILE FULLSCREEN
+  ====================================================== */
+
+  .image-modal {
+    padding: 15px;
+  }
+
+
+  .full-image {
+    max-width: 96vw;
+
+    max-height: 88vh;
+
+    border-radius: 6px;
+  }
+
+
+  .close-button {
+    top: 12px;
+
+    right: 12px;
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 31px;
+  }
+
 }
 
 
@@ -711,21 +991,26 @@
       2rem 0.85rem;
   }
 
+
   .header h1 {
     font-size: 1.65rem;
   }
+
 
   .header p {
     font-size: 1rem;
   }
 
+
   .container {
     padding: 1rem;
   }
 
+
   .content-section {
     margin-bottom: 2.5rem;
   }
+
 
   .content-section h2 {
     display: block;
@@ -737,6 +1022,7 @@
     margin-bottom: 1.5rem;
   }
 
+
   .content-section h2::after {
     left: 50%;
 
@@ -745,22 +1031,25 @@
   }
 
 
-  /* Full image on small screens */
-
   .gallery-grid {
     gap: 18px;
   }
 
+
+  /* SAME SIZE THUMBNAILS */
+
   .gallery-item {
-    aspect-ratio: auto;
+    aspect-ratio:
+      4 / 3;
 
     border-radius: 14px;
   }
 
-  .gallery-item img {
+
+  .image-wrapper img {
     width: 100%;
 
-    height: auto;
+    height: 100%;
 
     object-fit: contain;
   }
@@ -771,12 +1060,43 @@
       45px 14px 14px;
   }
 
+
   .overlay h3 {
     font-size: 1rem;
   }
 
+
   .overlay p {
     font-size: 0.82rem;
+  }
+
+
+  /* =====================================================
+     SMALL MOBILE FULLSCREEN
+  ====================================================== */
+
+  .image-modal {
+    padding: 10px;
+  }
+
+
+  .full-image {
+    max-width: 98vw;
+
+    max-height: 85vh;
+  }
+
+
+  .close-button {
+    top: 10px;
+
+    right: 10px;
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 28px;
   }
 
 
@@ -784,6 +1104,7 @@
     padding:
       0.9rem 0.85rem 0.4rem;
   }
+
 
   .video-item p {
     padding:
@@ -795,9 +1116,11 @@
     padding: 1.25rem;
   }
 
+
   .memory-card p {
     font-size: 0.95rem;
 
     line-height: 1.7;
   }
+
 }

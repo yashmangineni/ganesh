@@ -258,11 +258,9 @@
 </div> -->
 
 
-<div class="year-container">
+<!-- <div class="year-container">
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+  
 
   <div class="header">
 
@@ -281,9 +279,7 @@
   <div class="container">
 
 
-    <!-- =================================================
-         PHOTO GALLERY
-    ================================================== -->
+   
 
     <section class="content-section">
 
@@ -292,7 +288,7 @@
       </h2>
 
 
-      <!-- LOADING -->
+     
 
       <div
         class="loading"
@@ -304,7 +300,7 @@
       </div>
 
 
-      <!-- ERROR -->
+  
 
       <div
         class="error-message"
@@ -316,7 +312,7 @@
       </div>
 
 
-      <!-- GALLERY -->
+  
 
       <div
         class="gallery-grid"
@@ -338,7 +334,7 @@
         >
 
 
-          <!-- FULL IMAGE -->
+          
 
           <img
             [src]="getImageUrl(photo)"
@@ -348,7 +344,7 @@
           />
 
 
-          <!-- IMAGE DETAILS -->
+       
 
           <div class="overlay">
 
@@ -370,7 +366,7 @@
       </div>
 
 
-      <!-- NO IMAGES -->
+
 
       <div
         class="no-images"
@@ -391,9 +387,7 @@
 
 
 
-    <!-- =================================================
-         VIDEO COLLECTION
-    ================================================== -->
+  
 
     <section class="content-section">
 
@@ -449,9 +443,7 @@
 
 
 
-    <!-- =================================================
-         MEMORIES
-    ================================================== -->
+
 
     <section
       class="content-section memory-section"
@@ -491,5 +483,253 @@
 
 
   </div>
+
+</div> -->
+
+
+<div class="year-container">
+
+  <!-- ====================================== -->
+  <!-- HEADER -->
+  <!-- ====================================== -->
+
+  <div class="header">
+
+    <h1>
+      Vighnaharta Sukhakarta! 🕉️
+      Ganesh Utsav Celebrations 2023
+    </h1>
+
+    <p>
+      Pictures, Videos
+    </p>
+
+  </div>
+
+
+  <div class="container">
+
+
+    <!-- ====================================== -->
+    <!-- PHOTO GALLERY -->
+    <!-- ====================================== -->
+
+    <section class="content-section">
+
+      <h2>
+        📸 Photo Gallery
+      </h2>
+
+
+      <!-- LOADING -->
+
+      <div
+        class="loading"
+        *ngIf="loadingImages"
+      >
+        Loading 2023 images...
+      </div>
+
+
+      <!-- ERROR -->
+
+      <div
+        class="error-message"
+        *ngIf="imageError"
+      >
+        Unable to load 2023 images.
+      </div>
+
+
+      <!-- =========================================
+           PHOTO GALLERY
+      ========================================== -->
+
+      <div
+        class="gallery-grid"
+
+        *ngIf="
+          !loadingImages &&
+          !imageError &&
+          photos.length > 0
+        "
+      >
+
+        <div
+          class="gallery-item"
+
+          *ngFor="let photo of photos"
+
+          (click)="openImage(photo)"
+        >
+
+          <img
+            [src]="getImageUrl(photo)"
+            [alt]="getImageAlt(photo)"
+            loading="lazy"
+            decoding="async"
+          />
+
+        </div>
+
+      </div>
+
+
+      <!-- NO IMAGES -->
+
+      <div
+        class="no-images"
+
+        *ngIf="
+          !loadingImages &&
+          !imageError &&
+          photos.length === 0
+        "
+      >
+        No photos available for 2023.
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- VIDEO COLLECTION -->
+    <!-- ====================================== -->
+
+    <section class="content-section">
+
+      <h2>
+        🎥 Video Collection
+      </h2>
+
+
+      <div class="video-grid">
+
+
+        <div
+          class="video-item"
+
+          *ngFor="let video of videos"
+        >
+
+          <div class="video-player">
+
+            <video
+              [src]="video.src"
+              controls
+              preload="metadata"
+            >
+
+              Your browser does not
+              support the video tag.
+
+            </video>
+
+          </div>
+
+
+          <h3>
+            {{ video.title }}
+          </h3>
+
+
+          <p>
+            {{ video.description }}
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- MEMORY SECTION -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section memory-section"
+    >
+
+      <h2>
+        Cherished Memories of 2023
+      </h2>
+
+
+      <div class="memory-card">
+
+
+        <p>
+          The 2023 Ganesh Utsav celebrations
+          marked a special chapter for our
+          community with devotion, energy,
+          and many heartfelt memories created
+          together.
+        </p>
+
+
+        <p>
+          These photos and videos preserve
+          the joy of our prayers, cultural
+          moments, and the togetherness that
+          made the festival truly memorable
+          for everyone.
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FULLSCREEN IMAGE VIEWER
+====================================================== -->
+
+<div
+  class="image-modal"
+
+  *ngIf="selectedImage"
+
+  (click)="closeImage()"
+>
+
+
+  <!-- CLOSE BUTTON -->
+
+  <button
+    type="button"
+
+    class="close-button"
+
+    aria-label="Close image"
+
+    (click)="closeImage(); $event.stopPropagation()"
+  >
+    ×
+  </button>
+
+
+  <!-- FULL ORIGINAL IMAGE -->
+
+  <img
+    class="full-image"
+
+    [src]="getImageUrl(selectedImage)"
+
+    [alt]="getImageAlt(selectedImage)"
+
+    (click)="$event.stopPropagation()"
+  />
 
 </div>
