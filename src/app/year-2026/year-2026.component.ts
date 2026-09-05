@@ -73,13 +73,53 @@ export class Year2026Component implements OnInit {
   ];
   // 5-day celebration schedule (editable in code or later via admin UI)
   // schedule dates set to Sep 14–18, 2026
-  schedule = [
-    { day: 'Day 1', date: 'Sep 14, 2026', title: 'Inauguration & Pranapratishtha', details: 'Inauguration, devotional singing, and welcome rituals.' },
-    { day: 'Day 2', date: 'Sep 15, 2026', title: 'Cultural Programs', details: 'Dance and music performances by the community.' },
-    { day: 'Day 3', date: 'Sep 16, 2026', title: 'Community Feast', details: 'Community meal and social gatherings.' },
-    { day: 'Day 4', date: 'Sep 17, 2026', title: 'Procession', details: 'Street procession and devotional activities.' },
-    { day: 'Day 5', date: 'Sep 18, 2026', title: 'Nimarjanam & Farewell', details: 'Final rituals and immersion ceremony.' }
-  ];
+ 
+schedule = [
+  {
+    day: 'Day 1',
+    date: 'September 14, 2026',
+    title: '🙏 Ganesh Pooja & Auspicious Commencement',
+    details:
+      'The celebrations will begin with a traditional Ganesh Pooja, seeking the divine blessings of Lord Ganesha for a joyful and successful Ganesh Utsav.'
+  },
+  {
+    day: 'Day 2',
+    date: 'September 15, 2026',
+    title: '💃 Cultural Evening – Dance & Music',
+    details:
+      'An entertaining cultural evening featuring vibrant dance performances, melodious music and engaging programs presented by our talented participants.'
+  },
+  {
+    day: 'Day 3',
+    date: 'September 16, 2026',
+    title: '🌸 Traditional Kollatam',
+    details:
+      'Experience the beauty of our traditional culture through a special Kollatam performance, bringing together rhythm, tradition and community spirit.'
+  },
+  {
+    day: 'Day 4',
+    date: 'September 17, 2026',
+    title: '🎭 Grand Cultural Programs',
+    details:
+      'A special cultural celebration featuring a variety of traditional and contemporary performances, showcasing the creativity and talent of our community.'
+  },
+  {
+    day: 'Day 5',
+    date: 'September 18, 2026',
+    title: '🍚 Annadanam – Community Lunch',
+    details:
+      'Join us in the afternoon for Annadanam, followed by a community lunch. Everyone is warmly invited to share this special meal and celebrate togetherness.'
+  },
+  {
+    day: 'Day 6',
+    date: 'September 19, 2026',
+    title: '🍬 Laddu Pata & Grand Ganesh Nimajjanam',
+    details:
+      'The Laddu Pata celebrations will begin at 3:00 PM, followed by the grand Ganesh Nimajjanam. We warmly invite all devotees, friends, families and well-wishers to gather together and join us in the farewell procession of Lord Ganesha.'
+  }
+];
+
+
 
   // Replace with your actual UPI ID
 paymentUrl =
