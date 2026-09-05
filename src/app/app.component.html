@@ -33,15 +33,55 @@
       <a routerLink="/about" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">About</a>
       <a routerLink="/2026" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">Invitation</a>
 
-      <details class="nav-dropdown">
-        <summary class="nav-link summary">Categories <span aria-hidden="true">⌄</span></summary>
-        <div class="dropdown-items">
-          <a routerLink="/2026" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2026 Celebration</a>
-          <a routerLink="/2025" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2025</a>
-          <a routerLink="/2024" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2024</a>
-          <a routerLink="/2023" routerLinkActive="is-active" class="nav-link" (click)="closeMobileMenu()">2023</a>
-        </div>
-      </details>
+      <details
+  class="nav-dropdown"
+  #categoryDetails
+>
+  <summary class="nav-link summary">
+    Categories
+    <span aria-hidden="true">⌄</span>
+  </summary>
+
+  <div class="dropdown-items">
+
+    <a
+      routerLink="/2026"
+      routerLinkActive="is-active"
+      class="nav-link"
+      (click)="categoryDetails.open = false; closeMobileMenu()"
+    >
+      Celebration
+    </a>
+
+    <a
+      routerLink="/2025"
+      routerLinkActive="is-active"
+      class="nav-link"
+      (click)="categoryDetails.open = false; closeMobileMenu()"
+    >
+      2025
+    </a>
+
+    <a
+      routerLink="/2024"
+      routerLinkActive="is-active"
+      class="nav-link"
+      (click)="categoryDetails.open = false; closeMobileMenu()"
+    >
+      2024
+    </a>
+
+    <a
+      routerLink="/2023"
+      routerLinkActive="is-active"
+      class="nav-link"
+      (click)="categoryDetails.open = false; closeMobileMenu()"
+    >
+      2023
+    </a>
+
+  </div>
+</details>
 
       <a routerLink="/" fragment="seva" class="nav-link" (click)="closeMobileMenu()">Service</a>
       
