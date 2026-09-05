@@ -9,8 +9,8 @@
   background:
     linear-gradient(
       135deg,
-      #FFF3E0 0%,
-      #FFE0B2 100%
+      #E8F5E9 0%,
+      #C8E6C9 100%
     );
 }
 
@@ -23,8 +23,8 @@
   background:
     linear-gradient(
       135deg,
-      #FF6B35 0%,
-      #D32F2F 100%
+      #43A047 0%,
+      #2E7D32 100%
     );
 
   color: white;
@@ -100,7 +100,7 @@
       2.2rem
     );
 
-  color: #D32F2F;
+  color: #2E7D32;
 
   margin:
     0 0 2rem;
@@ -129,8 +129,8 @@
   background:
     linear-gradient(
       90deg,
-      #FF6B35,
-      #D32F2F
+      #43A047,
+      #2E7D32
     );
 }
 
@@ -356,7 +356,7 @@
 
   font-size: 1.1rem;
 
-  color: #D32F2F;
+  color: #2E7D32;
 
   background:
     rgba(
@@ -541,7 +541,7 @@
 
   margin: 0;
 
-  color: #D32F2F;
+  color: #2E7D32;
 
   font-weight: 600;
 
@@ -570,7 +570,7 @@
     linear-gradient(
       135deg,
       #ffffff 0%,
-      #FFF3E0 100%
+      #E8F5E9 100%
     );
 
   border-radius: 18px;
@@ -587,7 +587,7 @@
     );
 
   border-left:
-    5px solid #FF6B35;
+    5px solid #43A047;
 }
 
 
@@ -595,7 +595,7 @@
   margin:
     0 0 1rem;
 
-  color: #6b5241;
+  color: #355E3B;
 
   line-height: 1.8;
 
@@ -718,7 +718,7 @@
       0.95
     );
 
-  color: #D32F2F;
+  color: #2E7D32;
 
   font-size: 38px;
 
@@ -742,7 +742,7 @@
     rotate(90deg)
     scale(1.1);
 
-  background: #D32F2F;
+  background: #2E7D32;
 
   color: #ffffff;
 }
@@ -891,15 +891,15 @@
       linear-gradient(
         to top,
         rgba(
-          211,
-          47,
-          47,
+          46,
+          125,
+          50,
           0.94
         ),
         rgba(
-          255,
-          107,
-          53,
+          67,
+          160,
+          71,
           0.55
         ),
         transparent
